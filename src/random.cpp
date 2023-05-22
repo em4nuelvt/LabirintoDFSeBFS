@@ -146,7 +146,7 @@ void generateNextMove(unsigned int movementCase, unsigned int* currentX, unsigne
     }
 }
 
-void startRandom(){
+void startRandom(int* iteracoes, string* exibe){
     char** matrix;
     unsigned int movementCase;
     unsigned int currentX=0, currentY=6, lastY=currentY, lastX=currentX;
@@ -162,14 +162,16 @@ void startRandom(){
     readMatrix(matrix,nRows,nCols,inFile);
     cout<<endl;
     while(1){
+        //incrementa o numero de iteracoes
+        *iteracoes= *iteracoes+1;
         //////////////////////imprimir//////////////////////////////// 
-        std::this_thread::sleep_for(std::chrono::milliseconds(40));
+        /* std::this_thread::sleep_for(std::chrono::milliseconds(40));
         std::system("clear"); 
         // Imprime uma nova saída
         printMatrixWithColor(matrix,nRows,nCols,currentX,currentY);
         cout<<"Position: ("<<currentX<<","<<currentY<<")"<<endl;
         // Aguarda 0,1 segundos
-        std::this_thread::sleep_for(std::chrono::milliseconds(30));
+        std::this_thread::sleep_for(std::chrono::milliseconds(30)); */
 
         ///////////////////////movimentar//////////////////////////////
         lastX=currentX,lastY=currentY;
@@ -185,7 +187,9 @@ void startRandom(){
         //////////////////////////////////////////////////////////////
         ///////////////// tratamento de itens da matriz///////////////
         if(matrix[currentX][currentY]=='?'){
-            cout<<"achou o objetivo"<<endl;
+            system("clear");
+            cout<<"Posição encontrada (random): ("<<currentX<<", "<<currentY<<")"<<endl;
+            *exibe= *exibe + "Posição encontrada (rnd): ("+ to_string(currentX) +", "+to_string(currentY)+")\n";
             break;
         }
         else if(matrix[currentX][currentY]=='*'){
@@ -198,7 +202,7 @@ void startRandom(){
         }
 
     }
-
     /* cout<<nRows<<endl<<nCols<<endl; */
+    
     freeMatrix(matrix,nRows);
 }

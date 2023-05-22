@@ -1,5 +1,5 @@
 #include "dfs.hpp"
-void startDfs(){
+void startDfs(int* iteracoes, string* exibe){
     char** matrix;
     int nRows,nCols;
     ifstream inFile;
@@ -12,8 +12,9 @@ void startDfs(){
     matrix=allocateMatrix(nRows,nCols);
     readMatrix(matrix,nRows,nCols,inFile);
     Position start = {0,0};
-    Position result = dfs(matrix,start,nRows,nCols);
-    cout << "Posição encontrada: (" << result.row << ", " << result.col << ")"<<endl;
+    Position result = dfs(matrix,start,nRows,nCols,iteracoes);
+    cout << "Posição encontrada(dfs): (" << result.row << ", " << result.col << ")"<<endl;
+    *exibe= *exibe + "Posição encontrada (dfs): ("+ to_string(result.row) +", "+to_string(result.col)+")\n";
 
 
     freeMatrix(matrix,nRows);    
@@ -42,7 +43,7 @@ void printMatrixDfs(char** matrix,int currentX, int currentY, int nRows, int nCo
 }
 
 
-Position dfs(char** matrix, Position start, int nRows, int nCols ){
+Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes ){
     // Matriz para marcar as posições já visitadas
     bool **visitedPositions= (bool**)(malloc(sizeof(bool*)*nRows));
     for (int i=0;i<nRows;i++){
@@ -65,6 +66,9 @@ Position dfs(char** matrix, Position start, int nRows, int nCols ){
     int dc[] = {0, 1, 0, -1};
 
     while(!fila.vazia()){
+
+        *iteracoes=*iteracoes+1;
+        
         //obtem a posição atual da fila
         Position current = fila.desempilhar();
         visitedPositions[current.row][current.col] = true;
@@ -114,9 +118,9 @@ Position dfs(char** matrix, Position start, int nRows, int nCols ){
                 fila.empilhar(neighbors[i]);
             }
         } */
-        printMatrixDfs(matrix,current.row,current.col,nRows,nCols,visitedPositions);
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        system("clear");        
+/*         printMatrixDfs(matrix,current.row,current.col,nRows,nCols,visitedPositions);
+        std::this_thread::sleep_for(std::chrono::milliseconds(30));
+        system("clear"); */       
     }
     return{-1,-1};
 

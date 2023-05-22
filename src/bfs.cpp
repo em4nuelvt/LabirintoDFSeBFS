@@ -1,6 +1,9 @@
 #include "bfs.hpp"
 
-void startBfs(){
+void startBfs(int* iteracoes, string* exibe){
+
+    //incrementa iteração
+
     char** matrix;
     int nRows,nCols;
     ifstream inFile;
@@ -13,9 +16,9 @@ void startBfs(){
     matrix=allocateMatrix(nRows,nCols);
     readMatrix(matrix,nRows,nCols,inFile);
     Position start = {0,0};
-    Position result = bfs (matrix,start,nRows,nCols);
-    cout << "Posição encontrada: (" << result.row << ", " << result.col << ")"<<endl;
-
+    Position result = bfs (matrix,start,nRows,nCols,iteracoes);
+    cout << "Posição encontrada(bfs): (" << result.row << ", " << result.col << ")"<<endl;
+    *exibe= *exibe + "Posição encontrada (bfs): ("+ to_string(result.row) +", "+to_string(result.col)+")\n";
     freeMatrix(matrix,nRows);    
 }
 
@@ -44,7 +47,7 @@ void printMatrixBfs(char** matrix,int currentX, int currentY, int nRows, int nCo
 }
 
 
-Position bfs(char** matrix, Position start, int nRows, int nCols ){
+Position bfs(char** matrix, Position start, int nRows, int nCols,int* iteracoes){
     // Matriz para marcar as posições já visitadas
     bool **visitedPositions= (bool**)(malloc(sizeof(bool*)*nRows));
     for (int i=0;i<nRows;i++){
@@ -67,6 +70,8 @@ Position bfs(char** matrix, Position start, int nRows, int nCols ){
     int dc[] = {0, 0, -1, 1};
 
     while(!fila.vazia()){
+
+        *iteracoes=*iteracoes+1;
         //obtem a posição atual da fila
         Position current = fila.desempilhar();
 
@@ -106,9 +111,9 @@ Position bfs(char** matrix, Position start, int nRows, int nCols ){
                 fila.empilhar(newPosition);
             }
         }
-        printMatrixBfs(matrix,current.row, current.col,nRows,nCols,visitedPositions);
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        system("clear");        
+/*         printMatrixBfs(matrix,current.row, current.col,nRows,nCols,visitedPositions);
+        std::this_thread::sleep_for(std::chrono::milliseconds(30));
+        system("clear"); */        
     }
     return{-1,-1};
 
