@@ -1,7 +1,7 @@
 #include "dfs.hpp"
 void startDfs(){
     char** matrix;
-    unsigned int nRows,nCols;
+    int nRows,nCols;
     ifstream inFile;
     inFile.open("dataset/input.data",std::ios::in);
     if(!inFile){
@@ -20,12 +20,12 @@ void startDfs(){
 }
 
 
-void printMatrixDfs(char** matrix,unsigned int currentX, unsigned int currentY, unsigned int nRows, unsigned int nCols, bool** visitedPositions){
+void printMatrixDfs(char** matrix,int currentX, int currentY, int nRows, int nCols, bool** visitedPositions){
     std::cout << "\033[32m"; // define a cor vermelha
     std::cout<<"Busca em profundidade:"<<endl<<endl;
     std::cout << "\033[0m"; // restaura a cor padrão
-    for(unsigned int i=0;i<nRows;i++){
-        for(unsigned int j=0;j<nCols;j++){
+    for(int i=0;i<nRows;i++){
+        for(int j=0;j<nCols;j++){
             if((i==currentX)&&(j==currentY)){
                 std::cout << "\033[32m"; // define a cor vermelha
             }
@@ -42,14 +42,14 @@ void printMatrixDfs(char** matrix,unsigned int currentX, unsigned int currentY, 
 }
 
 
-Position dfs(char** matrix, Position start, unsigned int nRows, unsigned int nCols ){
+Position dfs(char** matrix, Position start, int nRows, int nCols ){
     // Matriz para marcar as posições já visitadas
     bool **visitedPositions= (bool**)(malloc(sizeof(bool*)*nRows));
-    for (unsigned int i=0;i<nRows;i++){
+    for (int i=0;i<nRows;i++){
         visitedPositions[i]=(bool*)(malloc(sizeof(bool)*nCols));
     }
-    for(unsigned int i=0;i<nRows;i++){
-        for(unsigned int j=0;j<nCols;j++){
+    for(int i=0;i<nRows;i++){
+        for(int j=0;j<nCols;j++){
             visitedPositions[i][j]=false;
         }
     }
@@ -80,8 +80,8 @@ Position dfs(char** matrix, Position start, unsigned int nRows, unsigned int nCo
                 fila.desempilhar();
             }
             fila.empilhar(start);
-            for(unsigned int i=0;i<nRows;i++){
-                for(unsigned int j=0;j<nCols;j++){
+            for(int i=0;i<nRows;i++){
+                for(int j=0;j<nCols;j++){
                     visitedPositions[i][j]=false;
                 }
             }
@@ -92,8 +92,8 @@ Position dfs(char** matrix, Position start, unsigned int nRows, unsigned int nCo
         //percorrer todas as possiveis movimentações da posição atual
         //para colocar novas posições na pilha
         for (int i = 3; i >= 0; i--){
-            unsigned int newRow = current.row + dr[i];
-            unsigned int newCol = current.col + dc[i];
+            int newRow = current.row + dr[i];
+            int newCol = current.col + dc[i];
 
             //verifica se a posição é válida
             //- diferente de parede
@@ -118,7 +118,7 @@ Position dfs(char** matrix, Position start, unsigned int nRows, unsigned int nCo
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         system("clear");        
     }
-    return{0,0};
+    return{-1,-1};
 
 
 }

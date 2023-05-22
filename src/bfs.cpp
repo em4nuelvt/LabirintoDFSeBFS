@@ -2,7 +2,7 @@
 
 void startBfs(){
     char** matrix;
-    unsigned int nRows,nCols;
+    int nRows,nCols;
     ifstream inFile;
     inFile.open("dataset/input.data",std::ios::in);
     if(!inFile){
@@ -19,15 +19,15 @@ void startBfs(){
     freeMatrix(matrix,nRows);    
 }
 
-bool isValidPosition(unsigned int x, unsigned int y, unsigned int nRows, unsigned int nCols){
+bool isValidPosition(int x, int y, int nRows, int nCols){
     return(x>=0 && x<nRows && y>=0 && y<nCols);
 }
-void printMatrixBfs(char** matrix,unsigned int currentX, unsigned int currentY, unsigned int nRows, unsigned int nCols, bool** visitedPositions){
+void printMatrixBfs(char** matrix,int currentX, int currentY, int nRows, int nCols, bool** visitedPositions){
     std::cout << "\033[32m"; // define a cor vermelha
     std::cout<<"Busca em largura:"<<endl<<endl;
     std::cout << "\033[0m"; // restaura a cor padrão
-    for(unsigned int i=0;i<nRows;i++){
-        for(unsigned int j=0;j<nCols;j++){
+    for(int i=0;i<nRows;i++){
+        for(int j=0;j<nCols;j++){
             if((i==currentX)&&(j==currentY)){
                 std::cout << "\033[32m"; // define a cor vermelha
             }
@@ -44,14 +44,14 @@ void printMatrixBfs(char** matrix,unsigned int currentX, unsigned int currentY, 
 }
 
 
-Position bfs(char** matrix, Position start, unsigned int nRows, unsigned int nCols ){
+Position bfs(char** matrix, Position start, int nRows, int nCols ){
     // Matriz para marcar as posições já visitadas
     bool **visitedPositions= (bool**)(malloc(sizeof(bool*)*nRows));
-    for (unsigned int i=0;i<nRows;i++){
+    for (int i=0;i<nRows;i++){
         visitedPositions[i]=(bool*)(malloc(sizeof(bool)*nCols));
     }
-    for(unsigned int i=0;i<nRows;i++){
-        for(unsigned int j=0;j<nCols;j++){
+    for(int i=0;i<nRows;i++){
+        for(int j=0;j<nCols;j++){
             visitedPositions[i][j]=false;
         }
     }
@@ -81,8 +81,8 @@ Position bfs(char** matrix, Position start, unsigned int nRows, unsigned int nCo
                 fila.desempilhar();
             }
             fila.empilhar(start);
-            for(unsigned int i=0;i<nRows;i++){
-                for(unsigned int j=0;j<nCols;j++){
+            for(int i=0;i<nRows;i++){
+                for(int j=0;j<nCols;j++){
                     visitedPositions[i][j]=false;
                 }
             }
@@ -92,9 +92,9 @@ Position bfs(char** matrix, Position start, unsigned int nRows, unsigned int nCo
         }
         //percorrer todas as possiveis movimentações da posição atual
         //para colocar novas posições na fila
-        for (unsigned int i = 0; i < 4; i++) {
-            unsigned int newRow = current.row + dr[i];
-            unsigned int newCol = current.col + dc[i];
+        for (int i = 0; i < 4; i++) {
+            int newRow = current.row + dr[i];
+            int newCol = current.col + dc[i];
 
             //verifica se a posição é válida
             //- diferente de parede
@@ -110,7 +110,7 @@ Position bfs(char** matrix, Position start, unsigned int nRows, unsigned int nCo
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         system("clear");        
     }
-    return{0,0};
+    return{-1,-1};
 
 
 }
