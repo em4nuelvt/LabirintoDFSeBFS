@@ -169,7 +169,7 @@ void startRandom(){
         printMatrixWithColor(matrix,nRows,nCols,currentX,currentY);
         cout<<"Position: ("<<currentX<<","<<currentY<<")"<<endl;
         // Aguarda 0,1 segundos
-        std::this_thread::sleep_for(std::chrono::milliseconds(40));
+        std::this_thread::sleep_for(std::chrono::milliseconds(30));
 
         ///////////////////////movimentar//////////////////////////////
         lastX=currentX,lastY=currentY;

@@ -16,7 +16,6 @@ void startBfs(){
     Position result = bfs (matrix,start,nRows,nCols);
     cout << "Posição encontrada: (" << result.row << ", " << result.col << ")"<<endl;
 
-
     freeMatrix(matrix,nRows);    
 }
 
@@ -108,7 +107,7 @@ Position bfs(char** matrix, Position start, unsigned int nRows, unsigned int nCo
             }
         }
         printMatrixBfs(matrix,current.row, current.col,nRows,nCols,visitedPositions);
-        std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
         system("clear");        
     }
     return{0,0};
