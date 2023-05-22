@@ -1,10 +1,12 @@
 #include "maze.hpp"
 #include "random.hpp"
 #include "bfs.hpp"
-
+#include "dfs.hpp"
 int main(){
-    //startRandom();
+    startRandom();
     startBfs();
+    startDfs();
+
     return 0;
 
 }
