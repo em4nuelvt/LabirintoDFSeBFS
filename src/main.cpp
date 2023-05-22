@@ -3,7 +3,7 @@
 #include "bfs.hpp"
 #include "dfs.hpp"
 int main(){
-    startRandom();
+    //startRandom();
     startBfs();
     startDfs();
 

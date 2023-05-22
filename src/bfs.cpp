@@ -23,18 +23,21 @@ void startBfs(){
 bool isValidPosition(unsigned int x, unsigned int y, unsigned int nRows, unsigned int nCols){
     return(x>=0 && x<nRows && y>=0 && y<nCols);
 }
-
-void printMatrixBfs(char** matrix, unsigned int nRows, unsigned int nCols, bool** visitedPositions){
+void printMatrixBfs(char** matrix,unsigned int currentX, unsigned int currentY, unsigned int nRows, unsigned int nCols, bool** visitedPositions){
     std::cout << "\033[32m"; // define a cor vermelha
     std::cout<<"Busca em largura:"<<endl<<endl;
     std::cout << "\033[0m"; // restaura a cor padrão
     for(unsigned int i=0;i<nRows;i++){
         for(unsigned int j=0;j<nCols;j++){
+            if((i==currentX)&&(j==currentY)){
+                std::cout << "\033[32m"; // define a cor vermelha
+            }
             if(visitedPositions[i][j]){
                 cout<<"[x] ";
             }else{
                 cout<<"["<<matrix[i][j]<<"] ";
             }
+            std::cout << "\033[0m"; // restaura a cor padrão
         }
         cout<<endl;
     }
@@ -104,7 +107,7 @@ Position bfs(char** matrix, Position start, unsigned int nRows, unsigned int nCo
                 fila.empilhar(newPosition);
             }
         }
-        printMatrixBfs(matrix,nRows,nCols,visitedPositions);
+        printMatrixBfs(matrix,current.row, current.col,nRows,nCols,visitedPositions);
         std::this_thread::sleep_for(std::chrono::milliseconds(50));
         system("clear");        
     }
