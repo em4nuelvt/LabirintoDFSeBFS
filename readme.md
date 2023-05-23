@@ -44,3 +44,9 @@ Obs.: A matriz de exemplo possui dimensões inferiores para simplificar a exempl
 # Estratégias de Implementação
 Como trata-se de um projeto envolvendo 3 algoritmos distintos, a implementação foi dividida em em funções chamadas start que iniciam a execução de cada um deles.  
 
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/47cfb764-1234-452a-8754-2b852da56a19)
+
+As estratégias de movimentação na matriz e de implementação de cada um dos métodos será detalhada a seguir:
+
+## Busca Randômica
+
