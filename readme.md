@@ -22,23 +22,21 @@ A porposta consiste na utilização de uma estratégia  de caminhamento randômi
 ## Caminhamento dentro da matriz
 
 As decisões de movimentação são baseadas na posição em que se encontra na matriz, pois as possibilidades de movimento vão depender se está em algum vértice, nas laterais(primeiras e ultimas linhas e colunas) ou no centro do labirinto. Essa posição relativa foi subdividida em 9 casos. São eles:
+Vertice superior esquerdo: movimenta para a direita ou para baixo.
+1. Vertice superior direito: Movimenta para esquerda ou para baixo
 
-    Vertice superior esquerdo: movimenta para a direita ou para baixo.
+2. Vertice inferior esquerdo: Movimenta para direita ou para cima.
 
-    Vertice superior direito: Movimenta para esquerda ou para baixo
+3. Vertice inferior direito: Movimenta para esquerda ou para cima.
 
-    Vertice inferior esquerdo: Movimenta para direita ou para cima.
+4. Primeira Linha: Movimenta para esquerda, para direita, para baixo.
 
-    Vertice inferior direito: Movimenta para esquerda ou para cima.
+5. Primeira Coluna: Movimenta para cima, para baixo, bara direita.
 
-    Primeira Linha: Movimenta para esquerda, para direita, para baixo.
+6. última linha: Movimenta para direita, para a esquerda, para cima.
 
-    Primeira Coluna: Movimenta para cima, para baixo, bara direita.
+7. Última coluna: Movimenta para cima, para baixo, para a esquerda.
 
-    Ultima linha: Movimenta para direita, para a esquerda, para cima.
-
-    Ultima coluna: Movimenta para cima, para baixo, para a esquerda.
-
-    Meio da matriz: Movimenta em todas as direções
+8. Meio da matriz: Movimenta em todas as direções.   
 
 
