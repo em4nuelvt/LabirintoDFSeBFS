@@ -123,3 +123,20 @@ O DFS por sua vez é implementado utilizando a estrutura de dados pilha, que da 
 ### Análise de Posições Válidas
 Tanto o BFS quanto o DFS usam uma função que recebe a coordenada (x,y) da posição e retorna se a posição é válida ou não. Essa função é importante para a estratégia de movimentação adotada para ambos os algoritmos.
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/2b819212-f5a4-46b4-a9df-4ea1fee9e44f)
+As direções de movimentação são: cima, esquerda, baixo, direita.
+
+### Gerar Novos Movimentos
+Para gerar novos movimentos, posições precisam ser inseridas na fila e na pilha para serem executados nas próximas iterações. Para isso, a posição corrente tem seus vizinhos verificados pela função "isValidPosition" e verifica-se também se são posições diferentes do elemento de parede (#) que precisa ser desviado. Caso a posição seja válida e diferente de parede, ela é inserida na estrutura de dados. 
+
+As posições são verificadas com um laço for que percorre as 4 possíveis direções que são representadas por 2 vetores de direção: dr para movimentar em linhas e dc para movimentar em colunas.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/392e5310-1d47-46ba-ab93-b1e2c78d5edf)
+
+A posição corrente é somada com a posição dos vetores dr e dc para obter-se uma nova posição a ser validada e inserida na estrutura:
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/52439664-e614-46b1-8879-d887be767995)
+
+
+
+
+
