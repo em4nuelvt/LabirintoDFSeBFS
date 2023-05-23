@@ -119,7 +119,13 @@ Os algoritmos de busca BFS e DFS apresentam carcaterísticas de implementação 
 
 O BFS é implementado com a utilização da estrutura de dados fila, que da uma carcaterística de propagação de onda nos movimentos. 
 
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/2e9352f4-6f57-413e-99c6-ec3e5cc9496a)
+
+
 O DFS por sua vez é implementado utilizando a estrutura de dados pilha, que da uma carterística de "reta" na propagação do movimento.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/c78eeb2b-5022-4266-8f76-a4d26088508d)
+
 
 ### Análise de Posições Válidas
 Tanto o BFS quanto o DFS usam uma função que recebe a coordenada (x,y) da posição e retorna se a posição é válida ou não. Essa função é importante para a estratégia de movimentação adotada para ambos os algoritmos.
@@ -143,7 +149,27 @@ Dessa forma, para essa sequencia de movimentos dos vetores dr e dc as posições
 - Para i = 2: posição da esquerda 
 - Para i = 3: posição da direita
 
+### Critério de parada
+Os critérios de parada para o BFS e para o DFS são:
+- Encontrar a posição do ponto de chegada (?).
+- A estrutura de dados ficar vazia (fila para o DFS e pilha para o BFS).
 
-
+### Ciclo de execução BFS:
+Fora do loop de execução, ao iniciar o algoritmo, a posição inicial (0,0) é inserida na fila. 
+Após isso, o algoritmo entra em um loop while que executa até encontrar um dos critérios de parada.
+- Loop:
+  - Incrementa o número de iterações;
+  - Atribui o primeiro elemento da fila para a posição corrente;
+  - Desenfileira, removendo o primeiro elemento;
+  - Verifica se a posição corresponde ao ponto de chegada (?)
+   - Caso atenda, o algoritmo é encerrado e é apresentado as informações na saída.
+  - Verifica se a posição corrente corresponde a elemento de dano;
+   - Caso seja:
+    - Limpa a fila;
+    - Empilha novamente o primeiro elemento;
+    - Muda a posição de ( * ) para ( 1 ), tornando a caminho livre;
+    - Continua para a próxima iteração;
+  - Verifica os vizinhos da posição corrente se são válidos e diferentes de parede. 
+  - Os vizinhos que forem válidos são inseridos na fila com a ordem de prioridade de verificação: cima, baixo, direita, esquerda.
 
 
