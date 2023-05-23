@@ -115,10 +115,11 @@ Essa posição relativa foi subdividida em 9 casos. São eles:
 
 
 ## Busca em Largura (BFS) e Busca em Profundidade (DFS)
-Os algoritmos de busca BFS e DFS apresentam carcaterísticas de implementação muito parecidas. A maior diferença entre os dois é a estrutura de dados auxiliar utilizada, que da características diferentes de movimentação quando visualizamos a execução do algoritmo, além de apresentarem número de iterações e tempo de execuções distintos por tomarem decisões diferentes de movimentação ao longo da execução da busca.
+Os algoritmos de busca BFS e DFS apresentam carcaterísticas de implementação muito parecidas. A maior diferença entre os dois é a estrutura de dados auxiliar utilizada: fila ou pilha. Cada estrutura da características diferentes de movimentação quando visualizamos a execução do algoritmo, além de apresentarem número de iterações e tempo de execuções distintos por tomarem decisões diferentes de movimentação ao longo da execução da busca.
 
 O BFS é implementado com a utilização da estrutura de dados fila, que da uma carcaterística de propagação de onda nos movimentos. 
-O DFS por sua vez é implementado utilizando a estrutura de dados pilha, que da uma carterística de "reta" na propagação do moovimento.
+
+O DFS por sua vez é implementado utilizando a estrutura de dados pilha, que da uma carterística de "reta" na propagação do movimento.
 
 ### Análise de Posições Válidas
 Tanto o BFS quanto o DFS usam uma função que recebe a coordenada (x,y) da posição e retorna se a posição é válida ou não. Essa função é importante para a estratégia de movimentação adotada para ambos os algoritmos.
@@ -135,6 +136,12 @@ As posições são verificadas com um laço for que percorre as 4 possíveis dir
 A posição corrente é somada com a posição dos vetores dr e dc para obter-se uma nova posição a ser validada e inserida na estrutura:
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/52439664-e614-46b1-8879-d887be767995)
+
+Dessa forma, para essa sequencia de movimentos dos vetores dr e dc as posições da matriz a serem analisadas são:
+- Para i = 0: posição de cima 
+- Para i = 1: posição de baixo 
+- Para i = 2: posição da esquerda 
+- Para i = 3: posição da direita
 
 
 
