@@ -69,23 +69,23 @@ Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes
             visitedPositions[i][j]=false;
         }
     }
-    //Fila para armazenar as posições a serem visitadas
-    Pilha fila;
+    //pilha para armazenar as posições a serem visitadas
+    Pilha pilha;
 
-    //insere a posição inicial na fila
-    fila.empilhar(start);
+    //insere a posição inicial na pilha
+    pilha.empilhar(start);
     visitedPositions[start.row][start.col]=true;
 
     //vetores de direções de movimentação (baixo,direita,cima,esquerda)
     int dr[] = {1, 0, -1, 0};
     int dc[] = {0, 1, 0, -1};
 
-    while(!fila.vazia()){
+    while(!pilha.vazia()){
 
         *iteracoes=*iteracoes+1;
         
-        //obtem a posição atual da fila
-        Position current = fila.desempilhar();
+        //obtem a posição atual da pilha
+        Position current = pilha.desempilhar();
         visitedPositions[current.row][current.col] = true;
 
         //verifica se a posição atual possui o caractere desejado
@@ -96,10 +96,10 @@ Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes
 
         if (matrix[current.row][current.col] == '*') {
             cout<<"caractere * encontrado, reinicia busca"<<endl;
-            while (!fila.vazia()) {
-                fila.desempilhar();
+            while (!pilha.vazia()) {
+                pilha.desempilhar();
             }
-            fila.empilhar(start);
+            pilha.empilhar(start);
             for(int i=0;i<nRows;i++){
                 for(int j=0;j<nCols;j++){
                     visitedPositions[i][j]=false;
@@ -122,7 +122,7 @@ Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes
             if (isValidPosition(newRow, newCol,nRows,nCols) && !visitedPositions[newRow][newCol] && matrix[newRow][newCol] != '#') {
                 //visitedPositions[newRow][newCol] = true;
                 Position newPosition = {newRow, newCol};
-                fila.empilhar(newPosition);
+                pilha.empilhar(newPosition);
             }
         }
         /* Position neighbors[4] = {{current.row - 1, current.col}, {current.row + 1, current.col}, {current.row, current.col - 1}, {current.row, current.col + 1}};
@@ -131,7 +131,7 @@ Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes
             int newCol = neighbors[i].col;
 
             if (isValidPosition(newRow, newCol,nRows,nCols) && !visitedPositions[newRow][newCol] && matrix[newRow][newCol] != '#') {
-                fila.empilhar(neighbors[i]);
+                pilha.empilhar(neighbors[i]);
             }
         } */
         if(escolha==1){
