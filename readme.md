@@ -80,6 +80,10 @@ Essa posição relativa foi subdividida em 9 casos. São eles:
  
  ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/93cf5a82-0f34-4fb1-a01c-3d722caf6694)
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/4ff691c4-bf9a-4b2e-85fc-f10bcf32fd86)
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/8b076f47-3c36-4a6d-9955-2aef20a524f2)
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/0ce3f5d0-c0f5-438f-9fed-a1f7ac8c4322)
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/74d10724-7027-4b37-ba03-55a5832ebf9e)
 
  
  Para cada caso, valores são gerados aleatoriamente por uma função geradora que indica ao algoritmo qual sera o próximo movimento na matriz, dentre os movimentos possíveis.
