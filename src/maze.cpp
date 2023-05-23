@@ -38,7 +38,7 @@ char** readMatrix(char** matrix,unsigned int nRows, unsigned int nCols, ifstream
 }
 
 void printMatrix(char** matrix, unsigned int nRows, unsigned int nCols){
-        for(unsigned int i=0;i<nRows;i++){
+    for(unsigned int i=0;i<nRows;i++){
         for(unsigned int j=0;j<nCols;j++){
             cout<<"["<<matrix[i][j]<<"] ";
         }

@@ -1,5 +1,5 @@
 #include "dfs.hpp"
-void startDfs(int* iteracoes, string* exibe){
+void startDfs(int* iteracoes, string* exibe,int escolha,ofstream &outFile){
     char** matrix;
     int nRows,nCols;
     ifstream inFile;
@@ -12,10 +12,10 @@ void startDfs(int* iteracoes, string* exibe){
     matrix=allocateMatrix(nRows,nCols);
     readMatrix(matrix,nRows,nCols,inFile);
     Position start = {0,0};
-    Position result = dfs(matrix,start,nRows,nCols,iteracoes);
+    Position result = dfs(matrix,start,nRows,nCols,iteracoes,escolha,outFile);
     cout << "Posição encontrada(dfs): (" << result.row << ", " << result.col << ")"<<endl;
-    *exibe= *exibe + "Posição encontrada (dfs): ("+ to_string(result.row) +", "+to_string(result.col)+")\n";
-
+    *exibe= *exibe + "Posição encontrada (dfs): ("+ to_string(result.row) +", "+to_string(result.col)+") "+to_string(*iteracoes)+" iterações\n";
+    
 
     freeMatrix(matrix,nRows);    
 }
@@ -42,8 +42,23 @@ void printMatrixDfs(char** matrix,int currentX, int currentY, int nRows, int nCo
     cout<<endl;
 }
 
+void writeOutputDfs(char** matrix, int nRows, int nCols, bool** visitedPositions, ofstream &outputFile){
+    outputFile<<"Matriz DFS:"<<endl;
+    for(int i=0;i<nRows;i++){
+        for(int j=0;j<nCols;j++){
 
-Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes ){
+            if(visitedPositions[i][j]){
+                outputFile<<"[x] ";
+            }else{
+                outputFile<<"["<<matrix[i][j]<<"] ";
+            }
+        }
+        outputFile<<endl;
+    }
+    outputFile<<endl<<endl;
+}
+
+Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes, int escolha,ofstream &outFile){
     // Matriz para marcar as posições já visitadas
     bool **visitedPositions= (bool**)(malloc(sizeof(bool*)*nRows));
     for (int i=0;i<nRows;i++){
@@ -75,6 +90,7 @@ Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes
 
         //verifica se a posição atual possui o caractere desejado
         if (matrix[current.row][current.col] == '?') {
+            writeOutputDfs(matrix,nRows,nCols,visitedPositions,outFile);
             return current;
         }
 
@@ -118,9 +134,11 @@ Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes
                 fila.empilhar(neighbors[i]);
             }
         } */
-/*         printMatrixDfs(matrix,current.row,current.col,nRows,nCols,visitedPositions);
-        std::this_thread::sleep_for(std::chrono::milliseconds(30));
-        system("clear"); */       
+        if(escolha==1){
+            printMatrixDfs(matrix,current.row,current.col,nRows,nCols,visitedPositions);
+            std::this_thread::sleep_for(std::chrono::milliseconds(30));
+            system("clear");
+        }        
     }
     return{-1,-1};
 

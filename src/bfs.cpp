@@ -1,8 +1,6 @@
 #include "bfs.hpp"
 
-void startBfs(int* iteracoes, string* exibe){
-
-    //incrementa iteração
+void startBfs(int* iteracoes, string* exibe,int escolha,ofstream &outFile){
 
     char** matrix;
     int nRows,nCols;
@@ -16,9 +14,9 @@ void startBfs(int* iteracoes, string* exibe){
     matrix=allocateMatrix(nRows,nCols);
     readMatrix(matrix,nRows,nCols,inFile);
     Position start = {0,0};
-    Position result = bfs (matrix,start,nRows,nCols,iteracoes);
+    Position result = bfs (matrix,start,nRows,nCols,iteracoes,escolha,outFile);
     cout << "Posição encontrada(bfs): (" << result.row << ", " << result.col << ")"<<endl;
-    *exibe= *exibe + "Posição encontrada (bfs): ("+ to_string(result.row) +", "+to_string(result.col)+")\n";
+    *exibe= *exibe + "Posição encontrada (bfs): ("+ to_string(result.row) +", "+to_string(result.col)+") "+to_string(*iteracoes)+" iterações\n";
     freeMatrix(matrix,nRows);    
 }
 
@@ -46,8 +44,24 @@ void printMatrixBfs(char** matrix,int currentX, int currentY, int nRows, int nCo
     cout<<endl;
 }
 
+void writeOutputBfs(char** matrix, int nRows, int nCols, bool** visitedPositions, ofstream &outputFile){
+    outputFile<<"Matriz BFS:"<<endl;
+    for(int i=0;i<nRows;i++){
+        for(int j=0;j<nCols;j++){
 
-Position bfs(char** matrix, Position start, int nRows, int nCols,int* iteracoes){
+            if(visitedPositions[i][j]){
+                outputFile<<"[x] ";
+            }else{
+                outputFile<<"["<<matrix[i][j]<<"] ";
+            }
+        }
+        outputFile<<endl;
+    }
+    outputFile<<endl<<endl;
+}
+
+
+Position bfs(char** matrix, Position start, int nRows, int nCols,int* iteracoes,int escolha,ofstream &outFile){
     // Matriz para marcar as posições já visitadas
     bool **visitedPositions= (bool**)(malloc(sizeof(bool*)*nRows));
     for (int i=0;i<nRows;i++){
@@ -72,11 +86,13 @@ Position bfs(char** matrix, Position start, int nRows, int nCols,int* iteracoes)
     while(!fila.vazia()){
 
         *iteracoes=*iteracoes+1;
+
         //obtem a posição atual da fila
         Position current = fila.desempilhar();
 
         //verifica se a posição atual possui o caractere desejado
         if (matrix[current.row][current.col] == '?') {
+            writeOutputBfs(matrix,nRows,nCols,visitedPositions,outFile);
             return current;
         }
 
@@ -111,9 +127,11 @@ Position bfs(char** matrix, Position start, int nRows, int nCols,int* iteracoes)
                 fila.empilhar(newPosition);
             }
         }
-/*         printMatrixBfs(matrix,current.row, current.col,nRows,nCols,visitedPositions);
-        std::this_thread::sleep_for(std::chrono::milliseconds(30));
-        system("clear"); */        
+        if(escolha==1){
+            printMatrixBfs(matrix,current.row, current.col,nRows,nCols,visitedPositions);
+            std::this_thread::sleep_for(std::chrono::milliseconds(30));
+            system("clear");
+        }        
     }
     return{-1,-1};
 

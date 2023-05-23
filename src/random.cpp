@@ -146,10 +146,23 @@ void generateNextMove(unsigned int movementCase, unsigned int* currentX, unsigne
     }
 }
 
-void startRandom(int* iteracoes, string* exibe){
+void writeOutputRND(char** matrix, unsigned int nRows, unsigned int nCols,ofstream &outFile){
+    outFile<<"Matriz Randomica"<<endl;
+    for(unsigned int i=0;i<nRows;i++){
+        for(unsigned int j=0;j<nCols;j++){
+            outFile<<"["<<matrix[i][j]<<"] ";
+        }
+        outFile<<endl;
+    }
+    outFile<<endl;
+    outFile<<endl;
+
+}
+
+void startRandom(int* iteracoes, string* exibe,int escolha,ofstream &outFile){
     char** matrix;
     unsigned int movementCase;
-    unsigned int currentX=0, currentY=6, lastY=currentY, lastX=currentX;
+    unsigned int currentX=0, currentY=0, lastY=currentY, lastX=currentX;
     unsigned int nRows,nCols;
     ifstream inFile;
     inFile.open("dataset/input.data",std::ios::in);
@@ -165,14 +178,15 @@ void startRandom(int* iteracoes, string* exibe){
         //incrementa o numero de iteracoes
         *iteracoes= *iteracoes+1;
         //////////////////////imprimir//////////////////////////////// 
-        /* std::this_thread::sleep_for(std::chrono::milliseconds(40));
-        std::system("clear"); 
-        // Imprime uma nova saída
-        printMatrixWithColor(matrix,nRows,nCols,currentX,currentY);
-        cout<<"Position: ("<<currentX<<","<<currentY<<")"<<endl;
-        // Aguarda 0,1 segundos
-        std::this_thread::sleep_for(std::chrono::milliseconds(30)); */
-
+        if(escolha==1){
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+            std::system("clear"); 
+            // Imprime uma nova saída
+            printMatrixWithColor(matrix,nRows,nCols,currentX,currentY);
+            cout<<"Position: ("<<currentX<<","<<currentY<<")"<<endl;
+            // Aguarda 0,1 segundos
+            std::this_thread::sleep_for(std::chrono::milliseconds(10)); 
+        }
         ///////////////////////movimentar//////////////////////////////
         lastX=currentX,lastY=currentY;
         movementCase=getMovementCase(currentX,currentY,nRows,nCols);
@@ -188,8 +202,9 @@ void startRandom(int* iteracoes, string* exibe){
         ///////////////// tratamento de itens da matriz///////////////
         if(matrix[currentX][currentY]=='?'){
             system("clear");
-            cout<<"Posição encontrada (random): ("<<currentX<<", "<<currentY<<")"<<endl;
-            *exibe= *exibe + "Posição encontrada (rnd): ("+ to_string(currentX) +", "+to_string(currentY)+")\n";
+            //cout<<"Posição encontrada (random): ("<<currentX<<", "<<currentY<<")"<<endl;
+            *exibe= *exibe + "Posição encontrada (rnd): ("+ to_string(currentX) +", "+to_string(currentY)+") "+to_string(*iteracoes)+" iterações\n";
+            writeOutputRND(matrix,nRows,nCols,outFile);
             break;
         }
         else if(matrix[currentX][currentY]=='*'){
@@ -206,3 +221,4 @@ void startRandom(int* iteracoes, string* exibe){
     
     freeMatrix(matrix,nRows);
 }
+
