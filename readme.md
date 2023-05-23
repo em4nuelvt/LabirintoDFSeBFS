@@ -43,7 +43,10 @@ Obs.: A matriz de exemplo possui dimensões inferiores para simplificar a exempl
 
 A matriz é alocada, lida ao inicio da execução de cada algoritmo e sua memória é liberada ao fim da execução.
 
-Além da matriz de entrada que deve ser inserida no diretório do projeto, o usuário deve informar ao início da execução se deseja visualizar a busca imprimindo as matrizes ou se deseja apenas visualizar as informações de comparação de eficiência entre os três algoritmos abordados.
+Além da matriz de entrada que deve ser inserida no diretório do projeto, o usuário deve informar ao início da execução se deseja visualizar a busca imprimindo as matrizes ou se deseja apenas visualizar as informações de comparação de eficiência entre os três algoritmos abordados atraves de um menu.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/a57017a1-f41f-412f-af46-a7e743afebe9)
+
 
 # Estratégias de Implementação
 A implentação da solução foi feita em c++ somente para a utilização da biblioteca fstream para leitura de arquivos eescrita de arquivos.Por isso, o código não segue todos os padrões de orientação a objetos. Os algoritmos apresentam várias funções auxiliares de execução, mas o "cérebro" se encontra nas funções "start" que lidam com toda a execução.
@@ -52,6 +55,8 @@ Como trata-se de um projeto envolvendo 3 algoritmos distintos, a implementação
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/47cfb764-1234-452a-8754-2b852da56a19)
 
 As estratégias de movimentação na matriz e de implementação de cada um dos métodos de busca será detalhada a seguir:
+
+
 
 ## Busca Randômica
 ### Caminhamento dentro da matriz
