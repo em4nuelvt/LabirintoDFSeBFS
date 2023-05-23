@@ -21,7 +21,7 @@ Encontrar uma posição em um labirinto utilizando as estratégias de busca rand
 
 Dessa forma, analisando os três métodos de busca, deve-se apresentar uma análise de custo e tempo de execução de cada um, a fim de comparar cada algoritmo.
 
-## Visão Geral
+# Visão Geral
 
 A proposta consiste na utilização de três métodos de busca para encontrar a posição que possui o elemento (?) dentro de uma matriz NxN e analisar o tempo de execução e número de iterações que cada algoritmo apresenta ao fim da execução.
 
@@ -33,11 +33,14 @@ Os três métodos de busca utilizados são:
 
 Para esse algoritmo a posição inicial adotada é sempre a posição (0,0).
 
-## Entrada
+# Entrada
 
 A entrada consiste de um arquivo "input.data" que se encontra no diretório "dataset" do projeto. O arquivo foi gerado a partir de um apicativo gerador disponibilizado pelo professor. O arquivo apresenta em sua primeira linha as informações da dimensão da matriz: número de linhas e número de colunas da matriz. Exemplo de entrada:
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/e60c21e4-0c81-4335-a337-5d2aab2658ab)
 
 Obs.: A matriz de exemplo possui dimensões inferiores para simplificar a exemplificação da entrada. Porém o intuido é executar o algoritmo em matrizes de ordem 50 ou superiores.
+
+# Estratégias de Implementação
+Como trata-se de um projeto envolvendo 3 algoritmos distintos, a implementação foi dividida em em funções chamadas start que iniciam a execução de cada um deles.  
 
