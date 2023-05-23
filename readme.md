@@ -39,14 +39,38 @@ A entrada consiste de um arquivo "input.data" que se encontra no diretório "dat
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/e60c21e4-0c81-4335-a337-5d2aab2658ab)
 
-Obs.: A matriz de exemplo possui dimensões inferiores para simplificar a exemplificação da entrada. Porém o intuido é executar o algoritmo em matrizes de ordem 50 ou superiores.
+Obs.: A matriz de exemplo possui dimensões inferiores para simplificar a exemplificação da entrada. Porém o intuido é executar o algoritmo em matrizes de ordem 50 ou superior.
+
+A matriz é alocada, lida ao inicio da execução de cada algoritmo e sua memória é liberada ao fim da execução.
 
 # Estratégias de Implementação
-Como trata-se de um projeto envolvendo 3 algoritmos distintos, a implementação foi dividida em em funções chamadas start que iniciam a execução de cada um deles.  
+A implentação da solução foi feita em c++ somente para a utilização da biblioteca fstream para leitura de arquivos eescrita de arquivos.Por isso, o código não segue todos os padrões de orientação a objetos. Os algoritmos apresentam várias funções auxiliares de execução, mas o "cérebro" se encontra nas funções "start" que lidam com toda a execução.
+Como trata-se de um projeto envolvendo 3 algoritmos distintos, a implementação foi dividida em  funções "start" diferentes que iniciam a execução de cada um deles.
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/47cfb764-1234-452a-8754-2b852da56a19)
 
-As estratégias de movimentação na matriz e de implementação de cada um dos métodos será detalhada a seguir:
+As estratégias de movimentação na matriz e de implementação de cada um dos métodos de busca será detalhada a seguir:
 
 ## Busca Randômica
+### Caminhamento dentro da matriz
+As decisões de movimentação são baseadas na posição corrente da matriz, pois as possibilidades de movimento vão depender se a iteração atual se encontra em algum vértice, nas laterais(primeiras e ultimas linhas e colunas) ou no centro do labirinto.
+Essa posição relativa foi subdividida em 9 casos. São eles:
+
+1. Vertice superior esquerdo: movimenta para a direita ou para baixo.
+
+2. Vertice superior direito: Movimenta para esquerda ou para baixo
+
+3. Vertice inferior esquerdo: Movimenta para direita ou para cima.
+
+4. Vertice inferior direito: Movimenta para esquerda ou para cima.
+
+5. Primeira Linha: Movimenta para esquerda, para direita ou para baixo.
+
+6. Primeira Coluna: Movimenta para cima, para baixo ou bara direita.
+
+7. Ultima linha: Movimenta para direita, para a esquerda ou para cima.
+
+8. Ultima coluna: Movimenta para cima, para baixo ou para a esquerda.
+
+9. Meio da matriz: Movimenta em todas as direções (esquerda, cima, direito, baixo).
 
