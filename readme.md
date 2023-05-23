@@ -112,3 +112,13 @@ Essa posição relativa foi subdividida em 9 casos. São eles:
   * Item de dano ( * ): reinicia matriz para posição (0,0);
 * Gera um novo movimento aletoriamente com uma função;
       * Verificar se é parede, caso seja, entra em um ciclo até gerar um caminho possível;
+
+
+## Busca em Largura (BFS) e Busca em Profundidade (DFS)
+Os algoritmos de busca BFS e DFS apresentam carcaterísticas de implementação muito parecidas. A maior diferença entre os dois é a estrutura de dados auxiliar utilizada, que da características diferentes de movimentação quando visualizamos a execução do algoritmo. 
+O BFS é implementado com a utilização da estrutura de dados fila, que da uma carcaterística de propagação de onda nos movimentos. 
+O DFS por sua vez é implementado utilizando a estrutura de dados pilha, que da uma carterística de "reta" na propagação do moovimento.
+
+### Análise de Posições Válidas
+Tanto o BFS quanto o DFS usam uma função que recebe a coordenada (x,y) da posição e retorna se a posição é válida ou não. Essa função é importante para a estratégia de movimentação adotada para ambos os algoritmos.
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/2b819212-f5a4-46b4-a9df-4ea1fee9e44f)
