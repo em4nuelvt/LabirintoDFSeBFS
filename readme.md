@@ -77,7 +77,10 @@ Essa posição relativa foi subdividida em 9 casos. São eles:
 9. Meio da matriz: Movimenta em todas as direções (esquerda, cima, direito, baixo).
 
  Os casos estão representados a seguir
- (colocar a imagem)
+ 
+ ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/93cf5a82-0f34-4fb1-a01c-3d722caf6694)
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/4ff691c4-bf9a-4b2e-85fc-f10bcf32fd86)
+
  
  Para cada caso, valores são gerados aleatoriamente por uma função geradora que indica ao algoritmo qual sera o próximo movimento na matriz, dentre os movimentos possíveis.
  
