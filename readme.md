@@ -43,6 +43,8 @@ Obs.: A matriz de exemplo possui dimensões inferiores para simplificar a exempl
 
 A matriz é alocada, lida ao inicio da execução de cada algoritmo e sua memória é liberada ao fim da execução.
 
+Além da matriz de entrada que deve ser inserida no diretório do projeto, o usuário deve informar ao início da execução se deseja visualizar a busca imprimindo as matrizes ou se deseja apenas visualizar as informações de comparação de eficiência entre os três algoritmos abordados.
+
 # Estratégias de Implementação
 A implentação da solução foi feita em c++ somente para a utilização da biblioteca fstream para leitura de arquivos eescrita de arquivos.Por isso, o código não segue todos os padrões de orientação a objetos. Os algoritmos apresentam várias funções auxiliares de execução, mas o "cérebro" se encontra nas funções "start" que lidam com toda a execução.
 Como trata-se de um projeto envolvendo 3 algoritmos distintos, a implementação foi dividida em  funções "start" diferentes que iniciam a execução de cada um deles.
@@ -74,3 +76,21 @@ Essa posição relativa foi subdividida em 9 casos. São eles:
 
 9. Meio da matriz: Movimenta em todas as direções (esquerda, cima, direito, baixo).
 
+ Os casos estão representados a seguir
+ (colocar a imagem)
+ 
+ Para cada caso, valores são gerados aleatoriamente por uma função geradora que indica ao algoritmo qual sera o próximo movimento na matriz, dentre os movimentos possíveis.
+ 
+### Critério de parada:
+ No algoritmo randômico, o único critério de parada estabelecido é encontrar o caractere (?) que finaliza a execução.
+ 
+### Ciclo de execução/implementação
+ A execução é feita dentro de um laço while com o seguinte ciclo de execução:
+ 
+ 
+* Verifica se atende ao critério de parada;
+  * Caso atenda, sai do loop.
+* Verifica a posição atual da matriz para executar alguma ação: 
+  * Item de dano ( * ): reinicia matriz para posição (0,0);
+* Gera um novo movimento aletoriamente com uma função;
+      * Verificar se é parede, caso seja, entra em um ciclo até gerar um caminho possível;
