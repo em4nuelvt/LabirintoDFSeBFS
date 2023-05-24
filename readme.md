@@ -273,6 +273,14 @@ Matriz 50x50 com itens # e * formando o labirinto, com o ponto de chegada na ult
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/30e97e1c-9f89-451a-b968-4bfe79775deb)
 
+### Número de iterações
+
+Iterações BFS: 4088
+
+Iterações DFS: 261
+
+Iterações RND: 192490,231456,197562,195160,208768,184104,227414,191184,182898,312822 
+
 ### Tempos de execução (em microssegundos)
 RND: 1505586, 17532928,14409801,15174466,16635947,14491748,17462575,14651139,14045105,24636014. 
 
@@ -282,11 +290,11 @@ DFS: 802,571,787,742,750,804,550,603,774,607.
 
 ### Média
 
-Media RND: 15054531 microssegundos.
+RND: 15054531 microssegundos.
 
-Media BFS: 1597 microssegundos.
+BFS: 1597 microssegundos.
 
-Media DFS: 699 microssegundos.
+DFS: 699 microssegundos.
 
 ### Desvio Padrão:
 
@@ -295,9 +303,9 @@ DP RND: 5693556 microssegundos.
 DP BFS: 240 microssegundos.
 
 DP DFS: 103 microssegundos.
-##
+###
 
-Para esse caso de teste o algoritmo de busca em profundidade se mostrou mais eficiente.
+Para esse caso de teste o algoritmo de busca em profundidade (dfs) se mostrou mais eficiente.
 
 ## Teste 2
 Matriz 50x50 com itens # e * formando o labirinto, com o ponto de chegada no centro da matriz.
@@ -330,8 +338,53 @@ DFS: 27070 microssegundos
 
 ### Desvio Padrão:
 RND: 4089867 microssegundos
+
 BFS: 3029 microssegundos
+
 DFS: 4530 microssegundos
+
+###
+Para esse caso de teste o algoritmo de busca em largura (bfs) se mostrou mais eficiente.
+
+## Teste 3
+Matriz 50x50 somente com caminho livre (1) e o ponto de chegada na ultima posição.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/3a18877b-85e5-464d-96e4-116cd07512c7)
+
+### Número de iterações
+
+Iterações BFS: 1394
+
+Iterações DFS: 99
+
+Iterações RND: 16336,1890,1960,2512,5642,3226,7978,11458,3594,1794
+
+### Tempos de execução (em microssegundos)
+
+RND: 843548,68472,107912,79646,181885,102538,264101,714149,119133,67803
+
+BFS: 1895,1168,1006,1782,954,697,863,1909,2009,1525
+
+DFS: 910,702,708,951,745,671,621,1019,1739,861
+
+### Média
+
+RND: 254919 microssegundos.
+
+BFS: 1381 microssegundos.
+
+DFS: 893 microssegundos.
+
+### Desvio Padrão:
+
+DP RND: 284128 microssegundos.
+
+DP BFS: 497 microssegundos.
+
+DP DFS: 325 microssegundos.
+###
+
+Para esse caso de teste o algoritmo de busca em profundidade (dfs) se mostrou mais eficiente.
 
 
 # Conclusão
