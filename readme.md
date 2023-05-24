@@ -349,7 +349,7 @@ Para esse caso de teste o algoritmo de busca em largura (bfs) se mostrou mais ef
 ## Teste 3
 Matriz 50x50 somente com caminho livre (1) e o ponto de chegada na ultima posição.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/3a18877b-85e5-464d-96e4-116cd07512c7)
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/47cdd76b-6395-4723-83f5-9c9b8598ebf5)
 
 ### Número de iterações
 
