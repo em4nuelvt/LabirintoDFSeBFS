@@ -214,3 +214,20 @@ As posições marcadas com * foram as posições desempilhadas, que nesse caso, 
 
 Obs.: A matriz sem elemetos de dano ( * ) e sem elementos de parede (#) estão presentes apenas para exemplificar como os algoritmos BFS E DFS executam de acordo com a estrutura de dados que cada um utiliza.
 
+# Saída
+Explicar sobre o outputFile e o que aparece no terminal.
+
+# Tempo de execução
+Mostrar como o tempo de execução foi calculado, biblioteca utilizada etc.
+
+# Testes de execução
+Testar matrizes diferentes e estados diferentes várias vezes, apresentara média de tempo de cada um com desvio padrão, número de execuções e analisar qual algoritmo foi mais rápido.
+
+# Conclusão
+Analisar de forma geral o custo e tempo de execução dos 3 algoritmos e tentar especular qual é mais eficiente, por que, em qual caso, etc.
+
+# Referências (caso precise)
+
+# Especificações de Hardware (talvez)
+
+# Comandos de execução
