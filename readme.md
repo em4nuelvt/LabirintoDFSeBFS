@@ -151,12 +151,12 @@ Dessa forma, para essa sequencia de movimentos dos vetores dr e dc as posições
 - Para i = 2: posição da esquerda 
 - Para i = 3: posição da direita
 
-### Critérios de parada
+## Critérios de parada
 Os critérios de parada para o BFS e para o DFS são:
 - Encontrar a posição do ponto de chegada (?).
 - A estrutura de dados ficar vazia (fila para o BFS e pilha para o DFS).
 
-### Ciclo de execução BFS:
+## Ciclo de execução BFS:
 Fora do loop de execução, ao iniciar o algoritmo, a posição inicial (0,0) é inserida na fila. 
 Após isso, o algoritmo entra em um loop while que executa até encontrar um dos critérios de parada.
 - Loop:
@@ -185,7 +185,7 @@ Ordem da fila: 1, 6, 2, 11, 7, 3, 16, 12, 8, 4, 21, 17, 13, 9, 5, 22, 18, 14, 10
 
 
 
-### Ciclo de execução DFS:
+## Ciclo de execução DFS:
 Fora do loop de execução, ao iniciar o algoritmo, a posição inicial (0,0) é inserida na pilha. 
 Após isso, o algoritmo entra em um loop while que executa até encontrar um dos critérios de parada.
 - Loop:
