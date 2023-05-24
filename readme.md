@@ -1,6 +1,7 @@
 # Labirinto: Busca em profundidade (DFS) e Largura (BFS)
- Trabalho da disciplina de algoritmos e estruturas de dados 1
- Integrantes: Anielly Gonçalves e Emanuel Vieira Tavares
+ Trabalho da disciplina de Algoritmos e Estruturas de Dados I.
+ 
+ Integrantes: Anielly Gonçalves e Emanuel Vieira Tavares.
 
 ## O problema
 
