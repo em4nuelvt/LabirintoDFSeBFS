@@ -173,6 +173,16 @@ Após isso, o algoritmo entra em um loop while que executa até encontrar um dos
   - Os vizinhos que forem válidos são inseridos na fila com a ordem de prioridade de verificação: cima, baixo, direita, esquerda.
   - Caso o usuário tenha selecionado a opção de impressão das matrizes, imprime a matriz no estado corrente.
 
+#### Exemplo:
+Comportamento do algoritmo BFS em uma matriz 5x5 com caminho livre:
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/cf18893c-8547-43f6-8206-f3ed7c9a4026)
+
+Ordem da fila: 1, 6, 2, 11, 7, 3, 16, 12, 8, 4, 21, 17, 13, 9, 5, 22, 18, 14, 10, 23, 19, 15, 24, 20, 25.
+
+
+
+
 ### Ciclo de execução DFS:
 Fora do loop de execução, ao iniciar o algoritmo, a posição inicial (0,0) é inserida na pilha. 
 Após isso, o algoritmo entra em um loop while que executa até encontrar um dos critérios de parada.
