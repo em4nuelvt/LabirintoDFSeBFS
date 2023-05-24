@@ -149,10 +149,10 @@ Dessa forma, para essa sequencia de movimentos dos vetores dr e dc as posições
 - Para i = 2: posição da esquerda 
 - Para i = 3: posição da direita
 
-### Critério de parada
+### Critérios de parada
 Os critérios de parada para o BFS e para o DFS são:
 - Encontrar a posição do ponto de chegada (?).
-- A estrutura de dados ficar vazia (fila para o DFS e pilha para o BFS).
+- A estrutura de dados ficar vazia (fila para o BFS e pilha para o DFS).
 
 ### Ciclo de execução BFS:
 Fora do loop de execução, ao iniciar o algoritmo, a posição inicial (0,0) é inserida na fila. 
@@ -165,11 +165,31 @@ Após isso, o algoritmo entra em um loop while que executa até encontrar um dos
    - Caso atenda, o algoritmo é encerrado e é apresentado as informações na saída.
   - Verifica se a posição corrente corresponde a elemento de dano;
    - Caso seja:
-    - Limpa a fila;
-    - Empilha novamente o primeiro elemento;
-    - Muda a posição de ( * ) para ( 1 ), tornando a caminho livre;
-    - Continua para a próxima iteração;
-  - Verifica os vizinhos da posição corrente se são válidos e diferentes de parede. 
+     - Limpa a fila;
+     - Enfileira novamente, inserindo a primeira posição (0,0) da matriz ma fila;
+     - Muda a posição de ( * ) para ( 1 ), tornando a caminho livre;
+     - Continua para a próxima iteração;
+  - Verifica os vizinhos da posição corrente se são válidos e diferentes de parede (#). 
   - Os vizinhos que forem válidos são inseridos na fila com a ordem de prioridade de verificação: cima, baixo, direita, esquerda.
+  - Caso o usuário tenha selecionado a opção de impressão das matrizes, imprime a matriz no estado corrente.
+
+### Ciclo de execução DFS:
+Fora do loop de execução, ao iniciar o algoritmo, a posição inicial (0,0) é inserida na pilha. 
+Após isso, o algoritmo entra em um loop while que executa até encontrar um dos critérios de parada.
+- Loop:
+  - Incrementa o número de iterações;
+  - Atribui o topo da pilha para a posição corrente;
+  - Desempilha, removendo o topo da iterção corrente;
+  - Verifica se a posição corresponde ao ponto de chegada (?)
+   - Caso atenda, o algoritmo é encerrado e é apresentado as informações na saída.
+  - Verifica se a posição corrente corresponde a elemento de dano ( * );
+   - Caso seja:
+     - Limpa a pilha;
+     - Insere a primeira posição (0,0) da matriz na pilha;
+     - Muda a posição de ( * ) para ( 1 ), tornando a caminho livre;
+     - Continua para a próxima iteração;
+  - Verifica os vizinhos da posição corrente se são válidos e diferentes de parede (#). 
+  - Os vizinhos que forem válidos são inseridos na pilha com a ordem de prioridade de verificação: esquerda, cima, direita, baixo.
+  - Caso o usuário tenha selecionado a opção de impressão das matrizes, imprime a matriz no estado corrente.
 
 
