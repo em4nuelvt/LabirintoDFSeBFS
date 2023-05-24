@@ -295,12 +295,43 @@ DP RND: 5693556 microssegundos.
 DP BFS: 240 microssegundos.
 
 DP DFS: 103 microssegundos.
+##
+
+Para esse caso de teste o algoritmo de busca em profundidade se mostrou mais eficiente.
 
 ## Teste 2
 Matriz 50x50 com itens # e * formando o labirinto, com o ponto de chegada no centro da matriz.
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/62af7d11-c9fd-4559-b653-150e821fa404)
 
+### Número de iterações
+
+Iterações BFS: 159613
+
+Iterações DFS: 170542
+
+Iterações RND (em média): 305242
+
+### Tempos de execução (em microssegundos)
+
+RND:  24937388,13723787,16328157,25950108,20894583,20194111,21518451,24933455,17318563,17865103
+
+BFS:  18924,20892,21251,24831,19115,19261,21882,22345,22688,28846
+
+DFS:  26855, 25081,25023,25517,25585,24822,28099,25657,24463,39600
+
+### Média
+
+RND: 20366371 microssegundos
+
+BFS: 22004 microssegundos
+
+DFS: 27070 microssegundos
+
+### Desvio Padrão:
+RND: 4089867 microssegundos
+BFS: 3029 microssegundos
+DFS: 4530 microssegundos
 
 
 # Conclusão
