@@ -261,7 +261,10 @@ O tempo de execução é calculado utilizando a biblioteca chrono. O contador é
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ea974dc0-7ad2-4ae1-b4e2-a57a8953a36e)
 
 # Testes e comparação de execução
-Testar matrizes diferentes e estados diferentes várias vezes, apresentara média de tempo de cada um com desvio padrão, número de execuções e analisar qual algoritmo foi mais rápido.
+Para analisar o comportamento dos algoritmos de busca em diferentes matrizes, cada matriz testada foi executada 10 vezes. Em cada teste, valores distintos de tempo de execução foram gerados. Para o caso do algoritmo randômico,não somente o tempo de execução varia, mas também o número de iterações.
+Para determinar o valor de tempo de execução de cada um dos algoritmos, foi utilizado a média aritmética dos tempos de execução apresentados em 10 execuções junto do desvio padrão da média.
+O desvio padrão irá indicar a dispersão dos dados.
+
 
 # Conclusão
 Analisar de forma geral o custo e tempo de execução dos 3 algoritmos e tentar especular qual é mais eficiente, por que, em qual caso, etc.
