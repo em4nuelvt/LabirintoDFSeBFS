@@ -233,6 +233,24 @@ O arquivo de saída gerado apresenta o estado da matriz em consequência da exec
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/71ec9372-edd1-4509-b248-56a58b5e09e3)
 
+## Saída do terminal:
+A saída do terminal depende da escolha do usuário no início da execução do algoritmo.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/a57017a1-f41f-412f-af46-a7e743afebe9)
+
+### Visualizando as Matrizes
+A cada iteração de cada algoritmo, a matriz no estado corrente é impressa no terminal e, em seguida, a função system("clear") limpa a tela com um delay estabelecido para cada algoritmo de forma que favoreça a visualização da busca.
+
+![Captura de tela de 2023-05-24 08-11-28](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ecde00cc-c951-41d0-9915-f4391b8eb9cd)
+![Captura de tela de 2023-05-24 08-11-39](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/610d5a88-4bf6-4bf3-99a1-f5b46473e043)
+![Captura de tela de 2023-05-24 08-11-44](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/31d8aba2-c728-4137-9523-71b2babdd5d1)
+
+Ao fim da execução das buscas, as informações de tempo de execução e número de iterações são informadas. É importante ressaltar que devido ao atraso de impressão, o tempo apresentado é muito maior, mas o número de iterações é coerente.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/0d31aaeb-b68d-4d75-9deb-93de39743a98)
+
+
+
 # Tempo de execução
 Mostrar como o tempo de execução foi calculado, biblioteca utilizada etc.
 
