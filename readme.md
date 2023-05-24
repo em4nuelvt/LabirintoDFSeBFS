@@ -251,11 +251,14 @@ Ao fim da execução das buscas, as informações de tempo de execução e núme
 
 ### Somente Tempo de Execução
 Somente o resultado da execução é impresso no terminal.
+
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/16cf75d6-f695-4b3a-a6f0-16d6e277b65a)
 
 
 # Tempo de execução
-Mostrar como o tempo de execução foi calculado, biblioteca utilizada etc.
+O tempo de execução é calculado utilizando a biblioteca chrono. O contador é iniciado antes do início da execução de um algoritmo na chamada da função start e finaliza após a execução da busca.  
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ea974dc0-7ad2-4ae1-b4e2-a57a8953a36e)
 
 # Testes de execução
 Testar matrizes diferentes e estados diferentes várias vezes, apresentara média de tempo de cada um com desvio padrão, número de execuções e analisar qual algoritmo foi mais rápido.
