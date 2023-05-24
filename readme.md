@@ -386,9 +386,23 @@ DP DFS: 325 microssegundos.
 
 Para esse caso de teste o algoritmo de busca em profundidade (dfs) se mostrou mais eficiente.
 
+##
+
+A partir da análise dos teste apresentados, nota-se que o desvio padrão dos algoritmos dfs e bfs é um valor relativamente baixo, o que indica que há pouca disperção de dados. O aloritmo randômico, entretanto, apresenta uma disperção maior do tempo de execução devido à variação imprevísivel a cada nova execução.
+
 
 # Conclusão
-Analisar de forma geral o custo e tempo de execução dos 3 algoritmos e tentar especular qual é mais eficiente, por que, em qual caso, etc.
+
+Portanto, de acordo com os critérios de implementação e análise de execução apresentados, foi possível verificar que os algoritmos de busca abordados apresentam comportamentos distintos.
+
+O algoritmo randômico pode apresentar raros casos de resultados positivos, com baixo tempo de execução, mas haverá  casos (maioria) em que seu tempo de execução será enorme, devido a sua carcterística de movimentar-se aleatoriamente. Para o algoritmo randomico, observa-se que seu número de iterações é, por padrão da análise de testes, mais alto que dos demais algoritmos.
+
+Os algoritmos dfs e bfs, por sua vez, apresentaram tempos de execução e números de iterações bem menores. Devido às semelhanças de implementação, os dois algoritmos apresentam comportamentos parecidos para determinados casos de teste. Entretanto, para determinar qual algoritmo vai ser mais eficiente, vai depender da posição que o elemento de critério de parada (?) estará. Devido às carcaterísticas e regras de implementação adotadas (estrutura de dados e ordem de movimentação), para os testes analisados, a busca em profundiade se mostrou mais eficiente para casos em que o caractere (?) estava mais próximo ao vertice inferior direito da matriz. Já a busca em largura mostrou-se eficiente para casos em que o caractere (?) se encontrava ao centro do labirinto. Dessa forma, vale ressaltar que para definir qual algoritmo apresenta melhor desempenho, irá depender da configuração da matriz ou da sorte de boas escolhas de movimentção para a busca randômica.
+
+Além disso, é importante notar que a estrutura de dados pilha e fila são resposáveis pelas diferenças de comportamento entre os algoritmos de busca dfs e bfs devido a forma com que há inserções e remoções de elementos em cada uma das estuturas.
+
+Sendo assim, em uma análise geral dos testes realizados, o número de iterações dos algoritmos bfs e dfs são constantes e do algoritmo randomico é variável, mas o tempo de execução dos algoritmos que utilizam uma estrutura de dados auxiliar é bem menor para matrizes de ordens superiores, como foi testado com matrizes 5050.
+
 
 # Referências (caso precise)
 
