@@ -221,7 +221,17 @@ As posições marcadas com * foram as posições desempilhadas, que nesse caso, 
 Obs.: A matriz sem elemetos de dano ( * ) e sem elementos de parede (#) estão presentes apenas para exemplificar como os algoritmos BFS E DFS executam de acordo com a estrutura de dados que cada um utiliza.
 
 # Saída
-Explicar sobre o outputFile e o que aparece no terminal.
+A saída da execução é apresentada de duas maneiras: um arquivo output.data no diretório dataset e impressão no terminal.
+
+## Arquivo Output:
+O arquivo de saída gerado apresenta o estado da matriz em consequência da execução de cada um dos algoritmos de busca, a posição encontrada e o número de iterações.
+### Exemplo de saída para uma matriz de entrada simples:
+#### Entrada
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/7bc711da-a5ea-428d-bd6f-6cebfe726428)
+
+#### Arquivo de Saída
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/71ec9372-edd1-4509-b248-56a58b5e09e3)
 
 # Tempo de execução
 Mostrar como o tempo de execução foi calculado, biblioteca utilizada etc.
