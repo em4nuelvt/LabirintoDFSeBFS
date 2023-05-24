@@ -386,9 +386,7 @@ DP DFS: 325 microssegundos.
 
 Para esse caso de teste o algoritmo de busca em profundidade (dfs) se mostrou mais eficiente.
 
-##
 
-A partir da análise dos teste apresentados, nota-se que o desvio padrão dos algoritmos dfs e bfs é um valor relativamente baixo, o que indica que há pouca disperção de dados. O aloritmo randômico, entretanto, apresenta uma disperção maior do tempo de execução devido à variação imprevísivel a cada nova execução.
 
 ## Teste 4
 
@@ -427,6 +425,11 @@ DP DFS: 489.02884 microssegundos
 ###
 
 Para esse caso de teste o algoritmo de busca em largura (bfs) se mostrou mais eficiente.
+
+
+##
+
+A partir da análise dos teste apresentados, nota-se que o desvio padrão dos algoritmos dfs e bfs é um valor relativamente baixo, o que indica que há pouca disperção de dados. O aloritmo randômico, entretanto, apresenta uma disperção maior do tempo de execução devido à variação imprevísivel a cada nova execução.
 
 # Conclusão
 
