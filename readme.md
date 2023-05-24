@@ -390,6 +390,11 @@ Para esse caso de teste o algoritmo de busca em profundidade (dfs) se mostrou ma
 
 ## Teste 4
 
+Matriz 50x50 somente com caminho livre (1) e o ponto de chegada no centro da matriz.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/dcb0533b-458b-44da-aec5-d32ffc81cb33)
+
+
 ### Número de iterações
 
 Iterações BFS: 1058,
