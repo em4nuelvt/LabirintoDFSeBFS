@@ -45,7 +45,7 @@ Obs.: A matriz de exemplo possui dimensões inferiores para simplificar a exempl
 
 A matriz é alocada, lida ao inicio da execução de cada algoritmo e sua memória é liberada ao fim da execução.
 
-Além da matriz de entrada que deve ser inserida no diretório do projeto, o usuário deve informar ao início da execução se deseja visualizar a busca imprimindo as matrizes ou se deseja apenas visualizar as informações de comparação de eficiência entre os três algoritmos abordados atraves de um menu.
+Além da matriz de entrada que deve ser inserida no diretório do projeto, o usuário deve informar, ao início da execução, se deseja visualizar a busca imprimindo as matrizes ou se deseja apenas visualizar as informações de comparação de eficiência entre os três algoritmos abordados, atraves de um menu.
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/a57017a1-f41f-412f-af46-a7e743afebe9)
 
