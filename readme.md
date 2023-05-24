@@ -260,7 +260,7 @@ O tempo de execução é calculado utilizando a biblioteca chrono. O contador é
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ea974dc0-7ad2-4ae1-b4e2-a57a8953a36e)
 
-# Testes de execução
+# Testes e comparação de execução
 Testar matrizes diferentes e estados diferentes várias vezes, apresentara média de tempo de cada um com desvio padrão, número de execuções e analisar qual algoritmo foi mais rápido.
 
 # Conclusão
