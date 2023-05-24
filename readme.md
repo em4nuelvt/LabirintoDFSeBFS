@@ -208,12 +208,14 @@ Após isso, o algoritmo entra em um loop while que executa até encontrar um dos
 
 #### Exemplo:
 Comportamento do algoritmo DFS em uma matriz 5x5 com caminho livre:
-O caminho que o algoritmo de fato percorre é o caminho colorido, porém é possível observar que as setas apontam para possíveis posições vizinhas que até são adicionadas na pilha. Porém, como a pilha remove o ultimo elemento, e o algoritmo torna-o a posição corrente, a matriz recebe esse desenho de "reta".
+
+O caminho que o algoritmo de fato percorre é o caminho colorido. Porém é possível observar que as setas apontam para possíveis posições vizinhas que também são adicionadas na pilha. Entretanto, como a pilha remove o ultimo elemento, e o algoritmo torna o topo da pilha na posição corrente, a matriz recebe esse formato de caminhamento profundo em linha reta.
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/6a4f3ce4-d786-46d0-90ab-4bf0582f9c22)
 
 Ordem da pilha: 1*, 2, 6*, 7, 11*, 12, 16*, 17, 21*, 22*, 23*, 18, 24*, 19, 25*.
-As posições marcadas com * foram as posições desempilhadas, que nesse caso, para uma matriz livre, coincide com o caminho até a condição de parada.
+
+As posições marcadas com * foram as posições desempilhadas, que nesse caso, para uma matriz com caminhos livres, coincide com o caminho até a condição de parada.
 
 
 Obs.: A matriz sem elemetos de dano ( * ) e sem elementos de parede (#) estão presentes apenas para exemplificar como os algoritmos BFS E DFS executam de acordo com a estrutura de dados que cada um utiliza.
