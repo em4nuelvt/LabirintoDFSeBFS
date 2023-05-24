@@ -269,6 +269,8 @@ O desvio padrão irá indicar a dispersão dos dados.
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/3d03ff33-4ca0-4e1e-9f6c-316fa5a47241)
 
 ## Teste 1
+Matriz 50x50 com itens # e * formando o labirinto, com o ponto de chegada na ultima posição.
+
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/30e97e1c-9f89-451a-b968-4bfe79775deb)
 
 ### Tempos de execução (em microssegundos)
@@ -293,6 +295,11 @@ DP RND: 5693556 microssegundos.
 DP BFS: 240 microssegundos.
 
 DP DFS: 103 microssegundos.
+
+## Teste 2
+Matriz 50x50 com itens # e * formando o labirinto, com o ponto de chegada no centro da matriz.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/62af7d11-c9fd-4559-b653-150e821fa404)
 
 
 
