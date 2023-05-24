@@ -249,6 +249,9 @@ Ao fim da execução das buscas, as informações de tempo de execução e núme
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/0d31aaeb-b68d-4d75-9deb-93de39743a98)
 
+### Somente Tempo de Execução
+Somente o resultado da execução é impresso no terminal.
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/16cf75d6-f695-4b3a-a6f0-16d6e277b65a)
 
 
 # Tempo de execução
