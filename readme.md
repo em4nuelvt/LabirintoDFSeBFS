@@ -131,7 +131,9 @@ O DFS por sua vez é implementado utilizando a estrutura de dados pilha, que da 
 
 ### Análise de Posições Válidas
 Tanto o BFS quanto o DFS usam uma função que recebe a coordenada (x,y) da posição e retorna se a posição é válida ou não. Essa função é importante para a estratégia de movimentação adotada para ambos os algoritmos.
+
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/2b819212-f5a4-46b4-a9df-4ea1fee9e44f)
+
 As direções de movimentação são: cima, esquerda, baixo, direita.
 
 ### Gerar Novos Movimentos
