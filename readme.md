@@ -271,6 +271,29 @@ O desvio padrão irá indicar a dispersão dos dados.
 ## Teste 1
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/30e97e1c-9f89-451a-b968-4bfe79775deb)
 
+### Tempos de execução (em microssegundos)
+RND: 1505586, 17532928,14409801,15174466,16635947,14491748,17462575,14651139,14045105,24636014. 
+
+BFS: 1836,1482,1793,1310,1696,1991,1514,1366,1292,1685. 
+
+DFS: 802,571,787,742,750,804,550,603,774,607.
+
+### Média
+
+Media RND: 15054531 microssegundos.
+
+Media BFS: 1597 microssegundos.
+
+Media DFS: 699 microssegundos.
+
+### Desvio Padrão:
+
+DP RND: 5693556 microssegundos.
+
+DP BFS: 240 microssegundos.
+
+DP DFS: 103 microssegundos.
+
 
 
 # Conclusão
