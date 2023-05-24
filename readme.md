@@ -390,6 +390,43 @@ Para esse caso de teste o algoritmo de busca em profundidade (dfs) se mostrou ma
 
 A partir da análise dos teste apresentados, nota-se que o desvio padrão dos algoritmos dfs e bfs é um valor relativamente baixo, o que indica que há pouca disperção de dados. O aloritmo randômico, entretanto, apresenta uma disperção maior do tempo de execução devido à variação imprevísivel a cada nova execução.
 
+## Teste 4
+
+### Número de iterações
+
+Iterações BFS: 1058,
+
+Iterações DFS: 1446
+
+Iterações RND: 9673,2309,13675,3035,759,7715,6183,5625,1957
+
+### Tempo de execução (em microssegundos)
+
+Tempo de execução RND: 513305,110429,600608,110236,26368,258303,205205,177177,1957,151866
+
+Tempo de execução BFS: 1818,1161,1272,1190,1211,1620,914,1004,1124,707
+
+Tempo de execução DFS: 1715,2321,1292,1060,1109,2225,1045,1147,1138,1159 
+
+### Média
+
+Media RND: 215545.4 microssegundos
+
+Media BFS: 1202.1 microssegundos
+
+Media DFS: 1421.1 microssegundos
+
+### Desvio Padrão
+
+DP RND: 196622.5776 microssegundos
+
+DP BFS: 322.18747 microssegundos
+
+DP DFS: 489.02884 microssegundos
+
+###
+
+Para esse caso de teste o algoritmo de busca em largura (bfs) se mostrou mais eficiente.
 
 # Conclusão
 
