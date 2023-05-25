@@ -472,3 +472,5 @@ Sendo assim, em uma análise geral dos testes realizados, o número de iteraçõ
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
 
 # Referências (caso precise)
+SILVA, M. P. da. Algoritmos e Estrutura de Dados I - Aula 2. : Centro Federal de
+Educação Tecnológica de Minas Gerais - CEFET-MG, 2023.
