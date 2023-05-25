@@ -471,6 +471,6 @@ Sendo assim, em uma análise geral dos testes realizados, o número de iteraçõ
 |  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
 
-# Referências (caso precise)
+# Referências 
 SILVA, M. P. da. Algoritmos e Estrutura de Dados I - Aula 2. : Centro Federal de
 Educação Tecnológica de Minas Gerais - CEFET-MG, 2023.
