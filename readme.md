@@ -258,7 +258,7 @@ Somente o resultado da execução é impresso no terminal.
 
 
 # Tempo de execução
-O tempo de execução é calculado utilizando a biblioteca chrono. O contador é iniciado antes do início da execução de um algoritmo na chamada da função start e finaliza após a execução da busca.  
+O tempo de execução é calculado utilizando a biblioteca chrono e é medido em microssegundos. O contador é iniciado antes do início da execução de um algoritmo na chamada da função start e finaliza após a execução da busca.  
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ea974dc0-7ad2-4ae1-b4e2-a57a8953a36e)
 
