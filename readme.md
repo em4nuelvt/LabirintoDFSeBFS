@@ -119,14 +119,16 @@ Essa posição relativa foi subdividida em 9 casos. São eles:
 ## Busca em Largura (BFS) e Busca em Profundidade (DFS)
 Os algoritmos de busca BFS e DFS apresentam carcaterísticas de implementação muito parecidas. A maior diferença entre os dois é a estrutura de dados auxiliar utilizada: fila ou pilha. Cada estrutura da características diferentes de movimentação quando visualizamos a execução do algoritmo, além de apresentarem número de iterações e tempo de execuções distintos por tomarem decisões diferentes de movimentação ao longo da execução da busca.
 
-O BFS é implementado com a utilização da estrutura de dados fila, que da uma carcaterística de propagação de onda nos movimentos. 
+O DFS é implementado utilizando a estrutura de dados pilha, que da uma carterística de "reta" na propagação do movimento.
+
+![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/c78eeb2b-5022-4266-8f76-a4d26088508d)
+
+O BFS, por sua vez, é implementado com a utilização da estrutura de dados fila, que da uma carcaterística de propagação de onda nos movimentos. 
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/2e9352f4-6f57-413e-99c6-ec3e5cc9496a)
 
 
-O DFS por sua vez é implementado utilizando a estrutura de dados pilha, que da uma carterística de "reta" na propagação do movimento.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/c78eeb2b-5022-4266-8f76-a4d26088508d)
 
 
 ### Análise de Posições Válidas
@@ -450,9 +452,16 @@ Além disso, é importante notar que a estrutura de dados pilha e fila são resp
 Sendo assim, em uma análise geral dos testes realizados, o número de iterações dos algoritmos bfs e dfs são constantes e do algoritmo randomico varia bastante. Contudo, o tempo de execução dos algoritmos que utilizam uma estrutura de dados auxiliar é  menor, principalmente para matrizes de ordens superiores, como foi testado com matrizes 50x50.
 
 
-# Referências (caso precise)
 
-# Especificações de Hardware (talvez)
+
+# Especificações de Hardware
+
+| Componentes            | Detalhes                                                                                         |
+| -----------------------| -----------------------------------------------------------------------------------------------  |
+|  `Processador`         | Intel© Core™ i7-4500U CPU @ 1.80GHz × 2                                            |
+|  `RAM Instalada`       | 8.0 GB (Utilizável: 7.6 GB)                                                                      |
+|  `Tipo de Sistema`     | Sistema Operacional de 64 bits, processador baseado em x64                                       |
+|  `Sistema Operacional` | Linux Mint 21.1 Cinnamon                                            |
 
 # Compilação e execução:
 
@@ -461,3 +470,5 @@ Sendo assim, em uma análise geral dos testes realizados, o número de iteraçõ
 |  `make clean`          | Apaga a última compilação realizada contida na pasta build                                        |
 |  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
+
+# Referências (caso precise)
