@@ -1,16 +1,13 @@
 # Labirinto: Busca em profundidade (DFS) e Largura (BFS)
  Trabalho da disciplina de Algoritmos e Estruturas de Dados I.
  
- Integrantes: Anielly Gonçalves e Emanuel Vieira Tavares.
-
-<<<<<<< HEAD
- 
+ Integrantes: Anielly Gonçalves e Emanuel Vieira Tavares. 
 
 
 =======
 ## O problema
 
-Encontrar uma posição em um labirinto utilizando as estratégias de busca randomica, busca em largura(bfs) e busca em profundidade(dfs) de acordo com as seguintes regras:
+Encontrar uma posição em um labirinto utilizando as estratégias de busca randômica, busca em largura(bfs) e busca em profundidade(dfs) de acordo com as seguintes regras:
 
 - A matriz será lida de um arquivo input.data no diretorio dataset do projeto.
 
@@ -56,7 +53,7 @@ Além da matriz de entrada que deve ser inserida no diretório do projeto, o usu
 
 
 # Estratégias de Implementação
-A implentação da solução foi feita em c++ somente para a utilização da biblioteca fstream para leitura de arquivos eescrita de arquivos.Por isso, o código não segue todos os padrões de orientação a objetos. Os algoritmos apresentam várias funções auxiliares de execução, mas o "cérebro" se encontra nas funções "start" que lidam com toda a execução.
+A implentação da solução foi feita em c++ somente para a utilização da biblioteca fstream para leitura de arquivos e escrita de arquivos.Por isso, o código não segue todos os padrões de orientação a objetos. Os algoritmos apresentam várias funções auxiliares de execução, mas o "cérebro" se encontra nas funções "start" que lidam com toda a execução.
 Como trata-se de um projeto envolvendo 3 algoritmos distintos, a implementação foi dividida em  funções "start" diferentes que iniciam a execução de cada um deles.
 
 ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/47cfb764-1234-452a-8754-2b852da56a19)
@@ -67,7 +64,7 @@ As estratégias de movimentação na matriz e de implementação de cada um dos 
 
 ## Busca Randômica
 ### Caminhamento dentro da matriz
-As decisões de movimentação são baseadas na posição corrente da matriz, pois as possibilidades de movimento vão depender se a iteração atual se encontra em algum vértice, nas laterais(primeiras e ultimas linhas e colunas) ou no centro do labirinto.
+As decisões de movimentação são baseadas na posição corrente da matriz, pois as possibilidades de movimento vão depender se a iteração atual se encontra em algum vértice, nas laterais(primeiras e últimas linhas e colunas) ou no centro do labirinto.
 Essa posição relativa foi subdividida em 9 casos. São eles:
 
 1. Vertice superior esquerdo: movimenta para a direita ou para baixo.
@@ -118,11 +115,11 @@ Essa posição relativa foi subdividida em 9 casos. São eles:
 * Verifica a posição atual da matriz para executar alguma ação: 
   * Item de dano ( * ): reinicia matriz para posição (0,0);
 * Gera um novo movimento aletoriamente com uma função;
-      * Verificar se é parede, caso seja, entra em um ciclo até gerar um caminho possível;
+    *Verificar se é parede, caso seja, entra em um ciclo até gerar um caminho possível;
 
 
 ## Busca em Largura (BFS) e Busca em Profundidade (DFS)
-Os algoritmos de busca BFS e DFS apresentam carcaterísticas de implementação muito parecidas. A maior diferença entre os dois é a estrutura de dados auxiliar utilizada: fila ou pilha. Cada estrutura da características diferentes de movimentação quando visualizamos a execução do algoritmo, além de apresentarem número de iterações e tempo de execuções distintos por tomarem decisões diferentes de movimentação ao longo da execução da busca.
+Os algoritmos de busca BFS e DFS apresentam carcaterísticas de implementação muito parecidas. A maior diferença entre os dois é a estrutura de dados auxiliar utilizada: fila ou pilha. Cada estrutura dá características diferentes de movimentação quando visualizamos a execução do algoritmo, além de apresentarem número de iterações e tempo de execuções distintos por tomarem decisões diferentes de movimentação ao longo da execução da busca.
 
 O DFS é implementado utilizando a estrutura de dados pilha, que da uma carterística de "reta" na propagação do movimento.
 
@@ -449,12 +446,12 @@ Portanto, de acordo com os critérios de implementação e análise de execuçã
 
 O algoritmo randômico pode apresentar raros casos de resultados positivos, com baixo tempo de execução, mas haverá  casos (maioria) em que seu tempo de execução será enorme, devido a sua carcterística de movimentar-se aleatoriamente. Para o algoritmo randomico, observa-se que seu número de iterações é, por padrão da análise de testes, mais alto que dos demais algoritmos.
 
-Os algoritmos dfs e bfs, por sua vez, apresentaram tempos de execução e números de iterações bem menores. Devido às semelhanças de implementação, os dois algoritmos apresentam comportamentos parecidos em relação ao número de iterações e tempo de execução para determinados casos de teste. Entretanto, para determinar qual algoritmo vai ser mais eficiente, vai depender da posição que o elemento de critério de parada (?) estará localizado no labirinto. Devido às carcaterísticas e regras de implementação adotadas (estrutura de dados e ordem de movimentação), para os testes analisados, a busca em profundiade se mostrou mais eficiente para casos em que o caractere (?) estava mais próximo às laterais da matriz. Já a busca em largura mostrou-se eficiente para casos em que o caractere (?) se encontrava próximo ao centro do labirinto. Dessa forma, vale ressaltar que, para definir qual algoritmo apresenta melhor desempenho, irá depender da configuração da matriz ou da sorte de boas escolhas de movimentção para a busca randômica.
+Os algoritmos dfs e bfs, por sua vez, apresentaram tempos de execução e números de iterações bem menores. Devido às semelhanças de implementação, os dois algoritmos apresentam comportamentos parecidos em relação ao número de iterações e tempo de execução para determinados casos de teste. Entretanto, para determinar qual algoritmo vai ser mais eficiente, vai depender da posição que o elemento de critério de parada (?) estará localizado no labirinto. Devido às carcaterísticas e regras de implementação adotadas (estrutura de dados e ordem de movimentação), para os testes analisados, a busca em profundidade se mostrou mais eficiente para casos em que o caractere (?) estava mais próximo às laterais da matriz. Já a busca em largura mostrou-se eficiente para casos em que o caractere (?) se encontrava próximo ao centro do labirinto. Dessa forma, vale ressaltar que, para definir qual algoritmo apresenta melhor desempenho, irá depender da configuração da matriz ou da sorte de boas escolhas de movimentção para a busca randômica.
 Por isso a resposta para qual caso é melhor é: depende.
 
 Além disso, é importante notar que a estrutura de dados pilha e fila são resposáveis pelas diferenças de comportamento entre os algoritmos de busca dfs e bfs devido a forma com que há inserções e remoções de elementos em cada uma das estuturas.
 
-Sendo assim, em uma análise geral dos testes realizados, o número de iterações dos algoritmos bfs e dfs são constantes e do algoritmo randomico varia bastante. Contudo, o tempo de execução dos algoritmos que utilizam uma estrutura de dados auxiliar é  menor, principalmente para matrizes de ordens superiores, como foi testado com matrizes 50x50.
+Sendo assim, em uma análise geral dos testes realizados, o número de iterações dos algoritmos bfs e dfs são constantes e do algoritmo randômico varia bastante. Contudo, o tempo de execução dos algoritmos que utilizam uma estrutura de dados auxiliar é  menor, principalmente para matrizes de ordens superiores, como foi testado com matrizes 50x50.
 
 
 
