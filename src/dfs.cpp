@@ -95,7 +95,7 @@ Position dfs(char** matrix, Position start, int nRows, int nCols, int *iteracoes
         }
 
         if (matrix[current.row][current.col] == '*') {
-            cout<<"caractere * encontrado, reinicia busca"<<endl;
+            //cout<<"caractere * encontrado, reinicia busca"<<endl;
             while (!pilha.vazia()) {
                 pilha.desempilhar();
             }

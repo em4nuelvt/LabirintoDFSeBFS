@@ -83,11 +83,15 @@ Position bfs(char** matrix, Position start, int nRows, int nCols,int* iteracoes,
     int dr[] = {-1, 1, 0, 0};
     int dc[] = {0, 0, -1, 1};
 
+    // vetores de direções: direita,baixo,esquerda,cima
+  /*   int dr[] = {0, 1, 0, -1};
+    int dc[] = {1, 0, -1, 0}; */
+
     while(!fila.vazia()){
 
         *iteracoes=*iteracoes+1;
 
-        //obtem a posição atual da fila
+        //obtem a posição atual da fila'
         Position current = fila.desempilhar();
 
         //verifica se a posição atual possui o caractere desejado
@@ -97,7 +101,7 @@ Position bfs(char** matrix, Position start, int nRows, int nCols,int* iteracoes,
         }
 
         if (matrix[current.row][current.col] == '*') {
-            cout<<"caractere * encontrado, reinicia busca"<<endl;
+            //cout<<"caractere * encontrado, reinicia busca"<<endl;
             while (!fila.vazia()) {
                 fila.desempilhar();
             }

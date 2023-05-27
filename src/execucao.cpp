@@ -29,7 +29,6 @@ void execucao(){
     int iteracoesRandom=0, iteracoesBfs=0, iteracoesDfs=0;
 
 
-
     auto start_time2 = chrono::high_resolution_clock::now();
     startBfs(&iteracoesBfs, &exibe,escolha,outFile);
     auto end_time2 = chrono::high_resolution_clock::now();
