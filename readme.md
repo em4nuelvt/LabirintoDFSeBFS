@@ -39,7 +39,7 @@ Para esse algoritmo a posição inicial adotada é sempre a posição (0,0).
 
 A entrada consiste de um arquivo "input.data" que se encontra no diretório "dataset" do projeto. O arquivo foi gerado a partir de um apicativo gerador disponibilizado pelo professor. O arquivo apresenta em sua primeira linha as informações da dimensão da matriz: número de linhas e número de colunas da matriz. Exemplo de entrada:
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/e60c21e4-0c81-4335-a337-5d2aab2658ab)
+![imagem1](./imagem/imagem1.png)
 
 Obs.: A matriz de exemplo possui dimensões inferiores para simplificar a exemplificação da entrada. Porém o intuido é executar o algoritmo em matrizes de ordem 50 ou superior.
 
@@ -47,14 +47,15 @@ A matriz é alocada, lida ao inicio da execução de cada algoritmo e sua memór
 
 Além da matriz de entrada que deve ser inserida no diretório do projeto, o usuário deve informar, ao início da execução, se deseja visualizar a busca imprimindo as matrizes no terminal ou se deseja apenas visualizar as informações de comparação de eficiência entre os três algoritmos abordados, atraves de um menu.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/a57017a1-f41f-412f-af46-a7e743afebe9)
+![imagem2](./imagem/imagem2.png)
 
 
 # Estratégias de Implementação
 A implentação da solução foi feita em c++ somente para a utilização da biblioteca fstream para leitura de arquivos eescrita de arquivos.Por isso, o código não segue todos os padrões de orientação a objetos. Os algoritmos apresentam várias funções auxiliares de execução, mas o "cérebro" se encontra nas funções "start" que lidam com toda a execução.
 Como trata-se de um projeto envolvendo 3 algoritmos distintos, a implementação foi dividida em  funções "start" diferentes que iniciam a execução de cada um deles.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/47cfb764-1234-452a-8754-2b852da56a19)
+![imagem3](./imagem/imagem3.png)
+
 
 As estratégias de movimentação na matriz e de implementação de cada um dos métodos de busca será detalhada a seguir:
 
@@ -85,17 +86,20 @@ Essa posição relativa foi subdividida em 9 casos. São eles:
 
  Os casos estão representados a seguir
  
- ![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/93cf5a82-0f34-4fb1-a01c-3d722caf6694)
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/4ff691c4-bf9a-4b2e-85fc-f10bcf32fd86)
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/8b076f47-3c36-4a6d-9955-2aef20a524f2)
+ ![imagem4](./imagem/imagem4.png)
+![imagem5](./imagem/imagem5.png)
+![imagem6](./imagem/imagem6.png)
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/0ce3f5d0-c0f5-438f-9fed-a1f7ac8c4322)
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/6784f4c8-96d8-461e-a668-18912970844f)
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ca20734c-b2d6-4d46-a59c-92f7aecdadd5)
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ec119ab7-70cb-4a39-a64f-63e16898fd6f)
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/af01a5ac-2c15-4308-a8c0-97ca082178e9)
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/1f597351-c63a-41f7-b30a-419a02d20e49)
+![imagem7](./imagem/imagem7.png)
+![imagem8](./imagem/imagem8.png)
+![imagem9](./imagem/imagem9.png)
+
+
+![imagem10](./imagem/imagem10.png)
+![imagem11](./imagem/imagem11.png)
+![imagem12](./imagem/imagem12.png)
+
 
 
  
@@ -121,11 +125,13 @@ Os algoritmos de busca BFS e DFS apresentam carcaterísticas de implementação 
 
 O DFS é implementado utilizando a estrutura de dados pilha, que da uma carterística de "reta" na propagação do movimento.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/c78eeb2b-5022-4266-8f76-a4d26088508d)
+![imagem13](./imagem/imagem13.png)
+
 
 O BFS, por sua vez, é implementado com a utilização da estrutura de dados fila, que da uma carcaterística de propagação de onda nos movimentos. 
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/2e9352f4-6f57-413e-99c6-ec3e5cc9496a)
+![imagem14](./imagem/imagem14.png)
+
 
 
 
@@ -134,7 +140,7 @@ O BFS, por sua vez, é implementado com a utilização da estrutura de dados fil
 ### Análise de Posições Válidas
 Tanto o BFS quanto o DFS usam uma função que recebe a coordenada (x,y) da posição analisada e retorna se a posição é válida ou não. Essa função é importante para a estratégia de movimentação adotada para ambos os algoritmos.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/2b819212-f5a4-46b4-a9df-4ea1fee9e44f)
+![imagem15](./imagem/imagem15.png)
 
 As direções de movimentação são: cima, esquerda, baixo, direita.
 
@@ -143,11 +149,13 @@ Para gerar novos movimentos, posições precisam ser inseridas na fila e na pilh
 
 As posições são verificadas com um laço for que percorre as 4 possíveis direções que são representadas por 2 vetores de direção: dr para movimentar em linhas e dc para movimentar em colunas.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/392e5310-1d47-46ba-ab93-b1e2c78d5edf)
+![imagem16](./imagem/imagem16.png)
+
 
 A posição corrente é somada com a posição dos vetores dr e dc para obter-se uma nova posição a ser validada e inserida na estrutura:
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/52439664-e614-46b1-8879-d887be767995)
+![imagem17](./imagem/imagem17.png)
+
 
 Dessa forma, para essa sequencia de movimentos dos vetores dr e dc as posições da matriz a serem analisadas são:
 - Para i = 0: posição de cima 
@@ -182,7 +190,8 @@ Após isso, o algoritmo entra em um loop while que executa até encontrar um dos
 #### Exemplo:
 Comportamento do algoritmo BFS em uma matriz 5x5 com caminho livre:
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/cf18893c-8547-43f6-8206-f3ed7c9a4026)
+![imagem18](./imagem/imagem18.png)
+
 
 Ordem da fila: 1, 6, 2, 11, 7, 3, 16, 12, 8, 4, 21, 17, 13, 9, 5, 22, 18, 14, 10, 23, 19, 15, 24, 20, 25.
 
@@ -213,7 +222,9 @@ Comportamento do algoritmo DFS em uma matriz 5x5 com caminho livre:
 
 O caminho que o algoritmo de fato percorre é o caminho colorido. Porém é possível observar que as setas apontam para possíveis posições vizinhas que também são adicionadas na pilha. Entretanto, como a pilha remove o ultimo elemento, e o algoritmo torna o topo da pilha na posição corrente, a matriz recebe esse formato de caminhamento profundo em linha reta.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/6a4f3ce4-d786-46d0-90ab-4bf0582f9c22)
+![imagem19](./imagem/imagem19.png)
+
+
 
 Ordem da pilha: 1*, 2, 6*, 7, 11*, 12, 16*, 17, 21*, 22*, 23*, 18, 24*, 19, 25*.
 
@@ -229,51 +240,51 @@ A saída da execução é apresentada de duas maneiras: um arquivo output.data n
 O arquivo de saída gerado apresenta o estado da matriz em consequência da execução de cada um dos algoritmos de busca, a posição encontrada e o número de iterações.
 ### Exemplo de saída para uma matriz de entrada simples:
 #### Entrada
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/7bc711da-a5ea-428d-bd6f-6cebfe726428)
+![imagem20](./imagem/imagem20.png)
 
 #### Arquivo de Saída
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/71ec9372-edd1-4509-b248-56a58b5e09e3)
+![imagem21](./imagem/imagem21.png)
 
 ## Saída do terminal:
 A saída do terminal depende da escolha do usuário no início da execução do algoritmo.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/a57017a1-f41f-412f-af46-a7e743afebe9)
+![imagem22](./imagem/imagem22.png)
 
 ### Visualizando as Matrizes
 A cada iteração de cada algoritmo, a matriz no estado corrente é impressa no terminal e, em seguida, a função system("clear") limpa a tela com um delay estabelecido para cada algoritmo de forma que favoreça a visualização da busca.
 
-![Captura de tela de 2023-05-24 08-11-28](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ecde00cc-c951-41d0-9915-f4391b8eb9cd)
-![Captura de tela de 2023-05-24 08-11-39](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/610d5a88-4bf6-4bf3-99a1-f5b46473e043)
-![Captura de tela de 2023-05-24 08-11-44](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/31d8aba2-c728-4137-9523-71b2babdd5d1)
+![imagem23](./imagem/imagem23.png)
+![imagem24](./imagem/imagem24.png)
+![imagem25](./imagem/imagem25.png)
 
 Ao fim da execução das buscas, as informações de tempo de execução e número de iterações são informadas. É importante ressaltar que devido ao atraso de impressão, o tempo apresentado é muito maior, mas o número de iterações é coerente.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/0d31aaeb-b68d-4d75-9deb-93de39743a98)
+![imagem26](./imagem/imagem26.png)
 
 ### Somente Tempo de Execução
 Somente o resultado da execução é impresso no terminal.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/16cf75d6-f695-4b3a-a6f0-16d6e277b65a)
+![imagem27](./imagem/imagem27.png)
 
 
 # Tempo de execução
 O tempo de execução é calculado utilizando a biblioteca chrono e é medido em microssegundos. O contador é iniciado antes do início da execução de um algoritmo na chamada da função start e finaliza após a execução da busca.  
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/ea974dc0-7ad2-4ae1-b4e2-a57a8953a36e)
+![imagem28](./imagem/imagem28.png)
 
 # Testes e comparação de execução
 Para analisar o comportamento dos algoritmos de busca em diferentes matrizes, cada matriz testada foi executada 10 vezes. Em cada teste, valores distintos de tempo de execução foram gerados. 
 Para comparar o valor de tempo de execução de cada um dos algoritmos, foi calculada a média aritmética simples dos tempos de execução apresentados em 10 execuções junto do desvio padrão da média.
 O desvio padrão irá indicar a dispersão dos dados.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/519788a3-70b3-4a52-8af8-4ff357348097)
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/3d03ff33-4ca0-4e1e-9f6c-316fa5a47241)
+![imagem29](./imagem/imagem29.png)
+![imagem30](./imagem/imagem30.png)
 
 ## Teste 1
 Matriz 50x50 com itens # e * formando o labirinto, com o ponto de chegada na ultima posição.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/30e97e1c-9f89-451a-b968-4bfe79775deb)
+![imagem31](./imagem/imagem31.png)
 
 ### Número de iterações
 
@@ -312,7 +323,7 @@ Para esse caso de teste o algoritmo de busca em profundidade (dfs) se mostrou ma
 ## Teste 2
 Matriz 50x50 com itens # e * formando o labirinto, com o ponto de chegada no centro da matriz.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/62af7d11-c9fd-4559-b653-150e821fa404)
+![imagem33](./imagem/imagem33.png)
 
 ### Número de iterações
 
@@ -351,7 +362,7 @@ Para esse caso de teste o algoritmo de busca em largura (bfs) se mostrou mais ef
 ## Teste 3
 Matriz 50x50 somente com caminho livre (1) e o ponto de chegada na ultima posição.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/47cdd76b-6395-4723-83f5-9c9b8598ebf5)
+![imagem32](./imagem/imagem32.png)
 
 ### Número de iterações
 
@@ -394,7 +405,7 @@ Para esse caso de teste o algoritmo de busca em profundidade (dfs) se mostrou ma
 
 Matriz 50x50 somente com caminho livre (1) e o ponto de chegada no centro da matriz.
 
-![image](https://github.com/em4nuelvt/LabirintoDFSeBFS/assets/64996505/dcb0533b-458b-44da-aec5-d32ffc81cb33)
+![imagem34](./imagem/imagem34.png)
 
 
 ### Número de iterações
