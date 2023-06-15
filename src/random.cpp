@@ -150,13 +150,12 @@ void writeOutputRND(char** matrix, unsigned int nRows, unsigned int nCols,ofstre
     outFile<<"Matriz Randomica"<<endl;
     for(unsigned int i=0;i<nRows;i++){
         for(unsigned int j=0;j<nCols;j++){
-            outFile<<"["<<matrix[i][j]<<"] ";
+            outFile<<"["<<matrix[i][j]<<"]";
         }
         outFile<<endl;
     }
     outFile<<endl;
     outFile<<endl;
-
 }
 
 void startRandom(int* iteracoes, string* exibe,int escolha,ofstream &outFile){

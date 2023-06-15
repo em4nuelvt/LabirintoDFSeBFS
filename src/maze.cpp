@@ -40,7 +40,7 @@ char** readMatrix(char** matrix,unsigned int nRows, unsigned int nCols, ifstream
 void printMatrix(char** matrix, unsigned int nRows, unsigned int nCols){
     for(unsigned int i=0;i<nRows;i++){
         for(unsigned int j=0;j<nCols;j++){
-            cout<<"["<<matrix[i][j]<<"] ";
+            cout<<"["<<matrix[i][j]<<"]";
         }
         cout<<endl;
     }
@@ -54,10 +54,10 @@ void printMatrixWithColor(char** matrixMaze,unsigned int nRows, unsigned int nCo
         for(unsigned int j=0;j<nCols;j++){
             if((i==x)&&(j==y)){
                 std::cout << "\033[31m"; // define a cor vermelha
-                std::cout <<"["<<matrixMaze[i][j]<<"] ";
+                std::cout <<"["<<matrixMaze[i][j]<<"]";
                 std::cout << "\033[0m"; // restaura a cor padrão
             }else{
-                cout<<"["<<matrixMaze[i][j]<<"] ";
+                cout<<"["<<matrixMaze[i][j]<<"]";
             }
         }
         cout<<endl;

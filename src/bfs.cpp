@@ -33,9 +33,9 @@ void printMatrixBfs(char** matrix,int currentX, int currentY, int nRows, int nCo
                 std::cout << "\033[32m"; // define a cor vermelha
             }
             if(visitedPositions[i][j]){
-                cout<<"[x] ";
+                cout<<"[x]";
             }else{
-                cout<<"["<<matrix[i][j]<<"] ";
+                cout<<"["<<matrix[i][j]<<"]";
             }
             std::cout << "\033[0m"; // restaura a cor padrão
         }
@@ -50,9 +50,9 @@ void writeOutputBfs(char** matrix, int nRows, int nCols, bool** visitedPositions
         for(int j=0;j<nCols;j++){
 
             if(visitedPositions[i][j]){
-                outputFile<<"[x] ";
+                outputFile<<"[x]";
             }else{
-                outputFile<<"["<<matrix[i][j]<<"] ";
+                outputFile<<"["<<matrix[i][j]<<"]";
             }
         }
         outputFile<<endl;
